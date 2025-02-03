@@ -1,0 +1,35 @@
+$desktop: 'screen and (max-width: 1240px)';
+$onlysmalldesktop: 'screen and (min-width: 1025px) and (max-width: 1149px)';
+$tablet: 'screen and (max-width: 1024px)';
+$phone: 'screen and (max-width: 767px)';
+$smallphone: 'screen and (max-width: 340px)';
+
+@mixin tablet {
+    @media (max-width: 1055px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+$main-font: 'Montserrat', 'Helvetica', sans-serif;
+
+$background-primary: rgba(255, 255, 255, 1);
+$accent-500: rgba(39, 191, 171, 1);
+$accent-700: rgba(26, 127, 114, 1);
+$success-500: rgba(30, 174, 83, 1);
+$link-500: rgba(17, 130, 187, 1);
+$link-700: rgba(12, 98, 141, 1);
+$darkner-4: rgba(0, 0, 0, 0.04);
+$darkner-16: rgba(0, 0, 0, 0.16);
+$darkner-24: rgba(0, 0, 0, 0.24);
+$darkner-48: rgba(0, 0, 0, 0.48);
+$error-500: rgba(229, 24, 24, 1);
+$text-primary: rgba(39, 38, 44, 1);
+$text-primary-invert: rgba(255, 255, 255, 1);
+$text-secondary: rgba(39, 38, 44, 0.72);
+$text-third: rgba(39, 38, 44, 0.56);

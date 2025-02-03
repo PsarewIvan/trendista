@@ -1,7 +1,16 @@
-block content
-    //- include ../components/tooltip.pug
-    //- include ../icons/icon-question.pug
-    //- include ../icons/icon-exit.pug
+block header
+    include ../components/button.pug
 
     header.header
-        
+        .header__content
+            .header__logo
+                img.header__logo-img(src='img/logo.svg')
+            ul.header__links
+                li
+                    a.header__link(href='') Данные
+                li
+                    a.header__link(href='') Вопросы и ответы
+                li
+                    a.header__link(href='') Тарифы
+            .header__login
+                +button({text: 'Войти', theme: 'secondary', size: 'l'})

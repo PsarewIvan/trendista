@@ -2,12 +2,13 @@
 @use 'fonts';
 @use 'vars';
 
+@use './components/header.scss';
+@use './components/footer.scss';
+@use './components/button.scss';
 // @use './components/pass-input.scss';
 // @use './components/text-area.scss';
 // @use './components/text-input.scss';
 // @use './components/tooltip.scss';
-// @use './components/header.scss';
-// @use './components/button.scss';
 // @use './components/toggle.scss';
 // @use './components/checkbox.scss';
 
@@ -23,22 +24,35 @@ html {
 }
 
 body {
-    min-height: 100%;
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 1.6;
     font-weight: 400;
     font-family: vars.$main-font;
-    line-height: 1.5;
     color: vars.$text-primary;
     background-color: vars.$background-primary;
 }
 
 .main {
-    max-width: 1176px;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 8px;
-    margin: 92px auto 48px;
+    max-width: 1176px;
+    min-height: calc(100vh - 432px);
+    padding: 0 12px 0;
+    margin: 100px auto 0;
+}
+
+.heading1 {
+    margin: 0 0 48px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44px;
+}
+
+.heading2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44px;
 }
 
 .hidden {

@@ -4,9 +4,62 @@ block variables
     - var hasLogin = 'true'
 
 block content
-    //- include ../includes/header.pug
-    //- include ../components/button.pug
-    //- include ../components/text-input.pug
+    include ../components/button.pug
+    include ../icons/icon-curet.pug
     //- include ../components/text-area.pug
 
-    .main
+    main.main
+        section.promo
+            p.promo__text Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?
+            h1.heading1 Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном
+            div
+                +button({text: 'Узнать больше', size: 'l'})
+        section.description
+            p.description__text Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка
+        section.reports
+            h2.heading2 Ежемесячные отчёты
+            .reports-grid
+                .reports-grid__block
+                    .reports-grid__title-block
+                        .reports-grid__title Общая выручка
+                    .reports-grid__prices
+                        .reports-grid__prices-block
+                            .reports-grid__price-text По рынку
+                            .reports-grid__price.reports-grid__price_red
+                                +icon-curet('reports-grid__price-icon')
+                                span 6,72 %
+                        .reports-grid__prices-block
+                            .reports-grid__price-text В моём салоне
+                            .reports-grid__price.reports-grid__price_green
+                                +icon-curet('reports-grid__price-icon reports-grid__price-icon_revert')
+                                span 10,48 %
+                .reports-grid__block.reports-grid__block_low
+                    .reports-grid__title-block
+                        .reports-grid__title Количество визитов
+                    .reports-grid__prices
+                        .reports-grid__prices-block
+                            .reports-grid__price-text По рынку
+                            .reports-grid__price.reports-grid__price_green
+                                +icon-curet('reports-grid__price-icon reports-grid__price-icon_revert')
+                                span 3,12 %
+                        .reports-grid__prices-block
+                            .reports-grid__price-text В моём салоне
+                            .reports-grid__price.reports-grid__price_green
+                                +icon-curet('reports-grid__price-icon reports-grid__price-icon_revert')
+                                span 1,21 %
+                .reports-grid__block.reports-grid__block_low
+                    .reports-grid__title-block
+                        .reports-grid__title Количество покупок
+                    .reports-grid__prices
+                        .reports-grid__prices-block
+                            .reports-grid__price-text По рынку
+                            .reports-grid__price.reports-grid__price_red
+                                +icon-curet('reports-grid__price-icon')
+                                span 2,83 %
+                        .reports-grid__prices-block
+                            .reports-grid__price-text В моём салоне
+                            .reports-grid__price.reports-grid__price_green
+                                +icon-curet('reports-grid__price-icon reports-grid__price-icon_revert')
+                                span 37,02 %
+            .reports__description Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.
+

@@ -7,8 +7,16 @@ html
         meta(content="", name="Description")
         meta(content="", name="Keywords")
         meta(content="index,follow", name="robots")
-        title Bitrix24
+        title Trendista Global
         link(rel="stylesheet" href="css/index.css")
     body
+        block header
+            include includes/header.pug
+
         block content
-    script(src="js/index.js")
+
+        block footer
+            include includes/footer.pug
+
+    script(src='libs/itc.js')
+    //- script(src="js/index.js")

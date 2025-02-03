@@ -19,17 +19,27 @@ $smallphone: 'screen and (max-width: 340px)';
 $main-font: 'Montserrat', 'Helvetica', sans-serif;
 
 $background-primary: rgba(255, 255, 255, 1);
-$accent-500: rgba(39, 191, 171, 1);
-$accent-700: rgba(26, 127, 114, 1);
-$success-500: rgba(30, 174, 83, 1);
-$link-500: rgba(17, 130, 187, 1);
-$link-700: rgba(12, 98, 141, 1);
+$background-secondary: rgba(245, 245, 245, 1);
 $darkner-4: rgba(0, 0, 0, 0.04);
-$darkner-16: rgba(0, 0, 0, 0.16);
+$darkner-8: rgba(0, 0, 0, 0.08);
 $darkner-24: rgba(0, 0, 0, 0.24);
-$darkner-48: rgba(0, 0, 0, 0.48);
-$error-500: rgba(229, 24, 24, 1);
-$text-primary: rgba(39, 38, 44, 1);
-$text-primary-invert: rgba(255, 255, 255, 1);
-$text-secondary: rgba(39, 38, 44, 0.72);
-$text-third: rgba(39, 38, 44, 0.56);
+
+$red-100: rgba(252, 221, 220, 1);
+$red-200: rgba(249, 187, 185, 1);
+$red-500: rgba(240, 84, 79, 1);
+$red-600: rgba(192, 67, 63, 1);
+$red-700: rgba(144, 50, 47, 1);
+
+$link-100: rgba(208, 231, 249, 1);
+$link-300: rgba(115, 184, 236, 1);
+$link-500: rgba(21, 136, 224, 1);
+$link-600: rgba(17, 109, 179, 1);
+
+$green-100: rgba(214, 236, 222, 1);
+$green-500: rgba(50, 159, 91, 1);
+$green-600: rgba(40, 127, 73, 1);
+
+$text-primary: rgba(41, 41, 41, 1);
+$text-primary-invert: rgba(255, 255, 255, 0.92);
+$text-secondary: rgba(41, 41, 41, 0.8);
+$text-third: rgba(41, 41, 41, 0.56);

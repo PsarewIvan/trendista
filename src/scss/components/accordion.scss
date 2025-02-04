@@ -1,0 +1,135 @@
+@use '../vars.scss';
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    &__item {
+        padding: 32px;
+        border-radius: 2px;
+
+        &:nth-child(5n + 1) {
+            background-color: #feeeed;
+        }
+        &:nth-child(5n + 2) {
+            background-color: #fcdddc;
+        }
+        &:nth-child(5n + 3) {
+            background-color: #fbccca;
+        }
+        &:nth-child(5n + 4) {
+            background-color: #f9bbb9;
+        }
+        &:nth-child(5n + 5) {
+            background-color: #f8aaa7;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    &__header-text {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__header-icon-wrapper {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        transition: all 0.2s;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        color: vars.$text-primary;
+        transition: all 0.2s;
+
+        &_minus {
+            display: none;
+        }
+
+        path {
+            transition: fill 0.2s;
+        }
+    }
+}
+
+.accordion__item_show .accordion__header-icon,
+.accordion__item_slidedown .accordion__icon {
+    // transform: rotate(-180deg);
+    // opacity: 0.2;
+}
+
+.accordion__item_show {
+    .accordion__icon_plus {
+        display: none;
+    }
+
+    .accordion__icon_minus {
+        display: block;
+    }
+}
+
+.accordion__header:hover {
+    .accordion__header-icon-wrapper {
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    .accordion__icon {
+        color: vars.$red-500;
+    }
+}
+
+.accordion__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 12px;
+    margin-right: 56px;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 36px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 4px;
+                border-radius: 20px;
+                background-color: vars.$red-500;
+            }
+        }
+    }
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__body {
+    display: none;
+}

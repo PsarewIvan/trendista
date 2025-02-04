@@ -11,8 +11,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__content">
-        <div class="header__logo"><img class="header__logo-img" src="img/logo.svg"></div>
+      <div class="header__content"><a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.svg"></a>
         <ul class="header__links">
           <li><a class="header__link" href="">Данные</a></li>
           <li><a class="header__link" href="">Вопросы и ответы</a></li>
@@ -25,7 +24,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="promo">
+      <section class="section promo">
         <p class="promo__text">Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?</p>
         <h1 class="heading1">Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном</h1>
         <div>
@@ -33,10 +32,10 @@
               </button>
         </div>
       </section>
-      <section class="description">
+      <section class="section description">
         <p class="description__text">Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка</p>
       </section>
-      <section class="reports">
+      <section class="section reports">
         <h2 class="heading2">Ежемесячные отчёты</h2>
         <div class="reports-grid">
           <div class="reports-grid__block">
@@ -111,11 +110,209 @@
         </div>
         <div class="reports__description">Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.</div>
       </section>
+      <section class="section questions">
+        <h2 class="heading2">Вопросы и ответы</h2>
+        <div class="accordion js-accordion">
+          <div class="accordion__item">
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>1.</span><span>По каким показателям я получу статистику?</span></span>
+              <div class="accordion__header-icon-wrapper">
+                    <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+                    <svg class="accordion__icon accordion__icon_minus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+              </div>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:
+                <ul>
+                  <li>Общая выручка</li>
+                  <li>Количество визитов</li>
+                  <li>Выручка за услуги</li>
+                  <li>Количество продаж (в единицах)</li>
+                  <li>Выручка по продажам</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>2.</span><span>Чем мне поможет чужая статистика? Мне важны свои показатели.</span></span>
+              <div class="accordion__header-icon-wrapper">
+                    <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+                    <svg class="accordion__icon accordion__icon_minus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+              </div>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:</div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>3.</span><span>Откуда вы берете данные для обработки?</span></span>
+              <div class="accordion__header-icon-wrapper">
+                    <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+                    <svg class="accordion__icon accordion__icon_minus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+              </div>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:</div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>4.</span><span>Будут ли расширяться статистические показатели?</span></span>
+              <div class="accordion__header-icon-wrapper">
+                    <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+                    <svg class="accordion__icon accordion__icon_minus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+              </div>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:</div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>5.</span><span>Могу ли я сделать выборку по своему региону или направлению?</span></span>
+              <div class="accordion__header-icon-wrapper">
+                    <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+                    <svg class="accordion__icon accordion__icon_minus" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
+                    </svg>
+              </div>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section statistics">
+        <div class="statistics__content">
+          <div class="statistics__blocks">
+            <div class="statistics__block">
+              <div class="statistics__block-title">3000+</div>
+              <div class="statistics__block-text">салонов с опытом работы более года включены в статистику, отражающую тренды рынка</div>
+            </div>
+            <div class="statistics__block">
+              <div class="statistics__block-title">30*</div>
+              <div class="statistics__block-text">ключевых показателей для сравнения вашего бизнеса с рынком</div>
+            </div>
+            <div class="statistics__block">
+              <div class="statistics__block-title">90%</div>
+              <div class="statistics__block-text">клиентов отмечают улучшение стратегии после анализа статистики</div>
+            </div>
+          </div>
+          <div class="statistics__description">* До тридцати показателей будет введено в статистические данные в течении 2025 года</div>
+        </div>
+      </section>
+      <section class="section access">
+        <div class="access__content">
+          <div class="access__title">
+            <h2 class="heading2">Получите доступ к статистике, чтобы всегда оставаться впереди</h2>
+            <p class="sub-heading">Вы можете сэкономить 10%, при оплате подписки на два года</p>
+          </div>
+          <div class="access__blocks">
+            <div class="access-card">
+              <div class="access-card__header">
+                <div class="access-card__title">Тренды рынка</div>
+                <div class="access-card__sub-title">Статистический анализ данных более 3000 действующих салонов Росии  </div>
+              </div>
+              <div class="access-card__price">
+                <div class="access-card__price-number">2500₽</div>
+                <div class="access-card__price-text">в год</div>
+              </div>
+              <div class="access-card__button">
+                    <button class="button l primary " type="button">Оформить подписку
+                    </button>
+              </div>
+            </div>
+            <div class="access-card">
+              <div class="access-card__header">
+                <div class="access-card__title">Тренды рынка + мой салон</div>
+                <div class="access-card__sub-title">Статистический анализ данных более 3000 действующих салонов России с показателями вашего бизнеса</div>
+              </div>
+              <div class="access-card__price">
+                <div class="access-card__price-number">3500₽</div>
+                <div class="access-card__price-text">в год</div>
+              </div>
+              <div class="access-card__button">
+                    <button class="button l primary " type="button">Оформить подписку
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section blog">
+        <div class="blog__content">
+          <div class="blog-item">
+            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo1.jpg"></div>
+            <div class="blog-item__content">
+              <div class="blog-item__tags">
+                <div class="blog-item__tag blog-item__tag_blue">Новости</div>
+                <div class="blog-item__time">12 января 2025</div>
+              </div><a class="blog-item__title" href="/">Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка</a>
+              <div class="blog-item__text">Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.</div>
+            </div>
+          </div>
+          <div class="blog-item">
+            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo2.jpg"></div>
+            <div class="blog-item__content">
+              <div class="blog-item__tags">
+                <div class="blog-item__tag blog-item__tag_green">Лайфхаки</div>
+                <div class="blog-item__time">12 января 2025</div>
+              </div><a class="blog-item__title" href="/">5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки</a>
+              <div class="blog-item__text">Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли</div>
+            </div>
+          </div>
+          <div class="blog-item">
+            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo3.jpg"></div>
+            <div class="blog-item__content">
+              <div class="blog-item__tags">
+                <div class="blog-item__tag blog-item__tag_red">Стратегия</div>
+                <div class="blog-item__time">12 января 2025</div>
+              </div><a class="blog-item__title" href="/">Анализ ваших показателей: как понять, что пора менять стратегию</a>
+              <div class="blog-item__text">Бизнес-коуч делится методиками анализа динамики выручки и визитов, помогая разработать успешный план действий для роста вашего бизнеса</div>
+            </div>
+          </div>
+          <div class="blog-item">
+            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo1.jpg"></div>
+            <div class="blog-item__content">
+              <div class="blog-item__tags">
+                <div class="blog-item__tag blog-item__tag_blue">Новости</div>
+                <div class="blog-item__time">12 января 2025</div>
+              </div><a class="blog-item__title" href="/">Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка</a>
+              <div class="blog-item__text">Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.</div>
+            </div>
+          </div>
+          <div class="blog-item">
+            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo2.jpg"></div>
+            <div class="blog-item__content">
+              <div class="blog-item__tags">
+                <div class="blog-item__tag blog-item__tag_green">Лайфхаки</div>
+                <div class="blog-item__time">12 января 2025</div>
+              </div><a class="blog-item__title" href="/">5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки</a>
+              <div class="blog-item__text">Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__content">
-        <div class="footer__block">
-          <div class="footer__logo"><img class="footer__logo-img" src="img/logo-black.svg"></div>
+        <div class="footer__block"><a class="footer__logo" href="/"><img class="footer__logo-img" src="img/logo-black.svg"></a>
           <div class="footer__copyright">© 2025, Все права защищены</div>
         </div>
         <div class="footer__block">
@@ -130,4 +327,5 @@
     </footer>
   </body>
   <script src="libs/itc.js"></script>
+  <script src="js/index.js"></script>
 </html>

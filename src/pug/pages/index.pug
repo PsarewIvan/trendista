@@ -6,17 +6,20 @@ block variables
 block content
     include ../components/button.pug
     include ../icons/icon-curet.pug
-    //- include ../components/text-area.pug
+    include ../icons/icon-plus.pug
+    include ../icons/icon-minus.pug
 
     main.main
-        section.promo
+        section.section.promo
             p.promo__text Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?
             h1.heading1 Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном
             div
                 +button({text: 'Узнать больше', size: 'l'})
-        section.description
+
+        section.section.description
             p.description__text Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка
-        section.reports
+
+        section.section.reports
             h2.heading2 Ежемесячные отчёты
             .reports-grid
                 .reports-grid__block
@@ -63,3 +66,149 @@ block content
                                 span 37,02 %
             .reports__description Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.
 
+        section.section.questions
+            h2.heading2 Вопросы и ответы
+            .accordion.js-accordion
+                .accordion__item
+                    .accordion__header.js-accordion-header
+                        span.accordion__header-text
+                            span 1.
+                            span По каким показателям я получу статистику?
+                        .accordion__header-icon-wrapper
+                            +icon-plus('accordion__icon accordion__icon_plus')
+                            +icon-minus('accordion__icon accordion__icon_minus')
+                    .accordion__body
+                        .accordion__content Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:
+                            ul
+                                li Общая выручка
+                                li Количество визитов
+                                li Выручка за услуги
+                                li Количество продаж (в единицах)
+                                li Выручка по продажам
+                .accordion__item
+                    .accordion__header.js-accordion-header
+                        span.accordion__header-text
+                            span 2.
+                            span Чем мне поможет чужая статистика? Мне важны свои показатели.
+                        .accordion__header-icon-wrapper
+                            +icon-plus('accordion__icon accordion__icon_plus')
+                            +icon-minus('accordion__icon accordion__icon_minus')
+                    .accordion__body
+                        .accordion__content Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:
+                .accordion__item
+                    .accordion__header.js-accordion-header
+                        span.accordion__header-text
+                            span 3.
+                            span Откуда вы берете данные для обработки?
+                        .accordion__header-icon-wrapper
+                            +icon-plus('accordion__icon accordion__icon_plus')
+                            +icon-minus('accordion__icon accordion__icon_minus')
+                    .accordion__body
+                        .accordion__content Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:
+                .accordion__item
+                    .accordion__header.js-accordion-header
+                        span.accordion__header-text
+                            span 4.
+                            span Будут ли расширяться статистические показатели?
+                        .accordion__header-icon-wrapper
+                            +icon-plus('accordion__icon accordion__icon_plus')
+                            +icon-minus('accordion__icon accordion__icon_minus')
+                    .accordion__body
+                        .accordion__content Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:
+                .accordion__item
+                    .accordion__header.js-accordion-header
+                        span.accordion__header-text
+                            span 5.
+                            span Могу ли я сделать выборку по своему региону или направлению?
+                        .accordion__header-icon-wrapper
+                            +icon-plus('accordion__icon accordion__icon_plus')
+                            +icon-minus('accordion__icon accordion__icon_minus')
+                    .accordion__body
+                        .accordion__content Tredndista Global предоставляет статистику по пяти ключевым показателям работы бьюти-салонов:
+
+        section.section.statistics
+            .statistics__content
+                .statistics__blocks
+                    .statistics__block
+                        .statistics__block-title 3000+
+                        .statistics__block-text салонов с опытом работы более года включены в статистику, отражающую тренды рынка
+                    .statistics__block
+                        .statistics__block-title 30*
+                        .statistics__block-text ключевых показателей для сравнения вашего бизнеса с рынком
+                    .statistics__block
+                        .statistics__block-title 90%
+                        .statistics__block-text клиентов отмечают улучшение стратегии после анализа статистики
+                .statistics__description * До тридцати показателей будет введено в статистические данные в течении 2025 года
+
+        section.section.access
+            .access__content
+                .access__title
+                    h2.heading2 Получите доступ к статистике, чтобы всегда оставаться впереди
+                    p.sub-heading Вы можете сэкономить 10%, при оплате подписки на два года
+                .access__blocks
+                    .access-card
+                        .access-card__header
+                            .access-card__title Тренды рынка
+                            .access-card__sub-title Статистический анализ данных более 3000 действующих салонов Росии  
+                        .access-card__price
+                            .access-card__price-number 2500₽
+                            .access-card__price-text в год
+                        .access-card__button
+                            +button({text: 'Оформить подписку', size: 'l'})
+                    .access-card
+                        .access-card__header
+                            .access-card__title Тренды рынка + мой салон
+                            .access-card__sub-title Статистический анализ данных более 3000 действующих салонов России с показателями вашего бизнеса
+                        .access-card__price
+                            .access-card__price-number 3500₽
+                            .access-card__price-text в год
+                        .access-card__button
+                            +button({text: 'Оформить подписку', size: 'l'})
+
+        section.section.blog
+            .blog__content
+                .blog-item
+                    .blog-item__img-wrapper
+                        img.blog-item__img(src="img/photo1.jpg")
+                    .blog-item__content
+                        .blog-item__tags
+                            .blog-item__tag.blog-item__tag_blue Новости
+                            .blog-item__time 12 января 2025
+                        a.blog-item__title(href='/') Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка
+                        .blog-item__text Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.
+                .blog-item
+                    .blog-item__img-wrapper
+                        img.blog-item__img(src="img/photo2.jpg")
+                    .blog-item__content
+                        .blog-item__tags
+                            .blog-item__tag.blog-item__tag_green Лайфхаки
+                            .blog-item__time 12 января 2025
+                        a.blog-item__title(href='/') 5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки
+                        .blog-item__text Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли
+                .blog-item
+                    .blog-item__img-wrapper
+                        img.blog-item__img(src="img/photo3.jpg")
+                    .blog-item__content
+                        .blog-item__tags
+                            .blog-item__tag.blog-item__tag_red Стратегия
+                            .blog-item__time 12 января 2025
+                        a.blog-item__title(href='/') Анализ ваших показателей: как понять, что пора менять стратегию
+                        .blog-item__text Бизнес-коуч делится методиками анализа динамики выручки и визитов, помогая разработать успешный план действий для роста вашего бизнеса
+                .blog-item
+                    .blog-item__img-wrapper
+                        img.blog-item__img(src="img/photo1.jpg")
+                    .blog-item__content
+                        .blog-item__tags
+                            .blog-item__tag.blog-item__tag_blue Новости
+                            .blog-item__time 12 января 2025
+                        a.blog-item__title(href='/') Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка
+                        .blog-item__text Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.
+                .blog-item
+                    .blog-item__img-wrapper
+                        img.blog-item__img(src="img/photo2.jpg")
+                    .blog-item__content
+                        .blog-item__tags
+                            .blog-item__tag.blog-item__tag_green Лайфхаки
+                            .blog-item__time 12 января 2025
+                        a.blog-item__title(href='/') 5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки
+                        .blog-item__text Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли

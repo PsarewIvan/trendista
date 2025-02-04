@@ -5,12 +5,7 @@
 @use './components/header.scss';
 @use './components/footer.scss';
 @use './components/button.scss';
-// @use './components/pass-input.scss';
-// @use './components/text-area.scss';
-// @use './components/text-input.scss';
-// @use './components/tooltip.scss';
-// @use './components/toggle.scss';
-// @use './components/checkbox.scss';
+@use './components/accordion.scss';
 
 @use './pages/index.scss';
 
@@ -53,6 +48,13 @@ body {
     font-size: 32px;
     font-weight: 600;
     line-height: 44px;
+}
+
+.sub-heading {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
 }
 
 .hidden {

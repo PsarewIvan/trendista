@@ -106,4 +106,182 @@ class ItcAccordion {
     });
 })();
 
+(() => {
+    const authButtons = document.querySelectorAll('.js-auth-button');
+
+    const popup = document.querySelector('.js-popup-auth');
+    // const popupForgotPass = document.querySelector('.js-popup-forgot-pass');
+    // const popupLogin = document.querySelector('.js-popup-login');
+    // const popupSuccess = document.querySelector('.js-popup-success');
+
+    const closePopupButtons = document.querySelectorAll('.js-close-popup');
+    // const forgotPassButtons = document.querySelectorAll(
+    //     '.js-auth-button-forgot'
+    // );
+    // const loginButtons = document.querySelectorAll('.js-login-button');
+    // const successButtons = document.querySelectorAll('.js-success-button');
+
+    closePopupButtons.forEach((button) => {
+        button?.addEventListener('click', closeAllPopup);
+    });
+
+    authButtons.forEach((button) => {
+        button?.addEventListener('click', openPopup(popup));
+    });
+
+    // forgotPassButtons.forEach((button) => {
+    //     button?.addEventListener('click', () => {
+    //         closeAllPopup();
+    //         // openPopup(popupForgotPass)();
+    //     });
+    // });
+
+    // loginButtons.forEach((button) => {
+    //     button?.addEventListener('click', () => {
+    //         closeAllPopup();
+    //         // openPopup(popupLogin)();
+    //     });
+    // });
+
+    // successButtons.forEach((button) => {
+    //     button?.addEventListener('click', () => {
+    //         closeAllPopup();
+    //         // openPopup(popupSuccess)();
+    //     });
+    // });
+
+    popup?.addEventListener('click', overlayClose(popup));
+    // popupForgotPass?.addEventListener('click', overlayClose(popupForgotPass));
+    // popupLogin?.addEventListener('click', overlayClose(popupLogin));
+    // popupSuccess?.addEventListener('click', overlayClose(popupSuccess));
+
+    function closeAllPopup() {
+        closePopup(popup)();
+        // closePopup(popupForgotPass)();
+        // closePopup(popupLogin)();
+        // closePopup(popupSuccess)();
+    }
+
+    function overlayClose(element) {
+        return (evt) => {
+            if (evt.target === element) {
+                closePopup(element)();
+            }
+        };
+    }
+
+    function openPopup(element) {
+        return () => {
+            element?.classList.remove('hidden');
+            element?.focus();
+            document.body.classList.add('body-lock');
+            trapFocus(element);
+        };
+    }
+
+    function closePopup(element) {
+        return () => {
+            element?.classList.add('hidden');
+            document.body.classList.remove('body-lock');
+        };
+    }
+
+    function trapFocus(element) {
+        const focusableElements = element?.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+
+        if (element && focusableElements) {
+            const firstFocusableElement = focusableElements[0];
+            const lastFocusableElement =
+                focusableElements[focusableElements.length - 1];
+
+            element.addEventListener('keydown', function (e) {
+                const isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+                if (!isTabPressed) {
+                    return;
+                }
+
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusableElement) {
+                        lastFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusableElement) {
+                        firstFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            });
+        }
+    }
+})();
+
+(() => {
+    const nodes = document.querySelectorAll('.js-pass-input-node');
+
+    nodes.forEach((node) => {
+        const input = node.querySelector('.js-pass-input');
+        const show = node.querySelector('.js-pass-input-show');
+        const openIcon = node.querySelector('.js-pass-input-icon-open');
+        const closedIcon = node.querySelector('.js-pass-input-icon-closed');
+
+        show?.addEventListener('click', () => {
+            const type = input?.getAttribute('type');
+
+            if (type === 'password') {
+                input.setAttribute('type', 'text');
+                openIcon?.classList.remove('hidden');
+                closedIcon?.classList.add('hidden');
+            } else {
+                input.setAttribute('type', 'password');
+                openIcon?.classList.add('hidden');
+                closedIcon?.classList.remove('hidden');
+            }
+        });
+    });
+})();
+
+(() => {
+    const ACTIVE_CLASS = 'active';
+
+    const nodes = document.querySelectorAll('.js-text-input-node');
+
+    nodes.forEach((node) => {
+        const input = node.querySelector('.js-text-input');
+        const reset = node.querySelector('.js-text-input-reset');
+        const alert = node.querySelector('.js-text-input-alert');
+
+        if (input.value !== '') {
+            reset?.classList.add(ACTIVE_CLASS);
+        }
+
+        input?.addEventListener('blur', (event) => {
+            if (event.target.value === '') {
+                alert?.classList.add(ACTIVE_CLASS);
+            } else {
+                alert?.classList.remove(ACTIVE_CLASS);
+            }
+        });
+
+        input?.addEventListener('input', (event) => {
+            if (event.target.value === '') {
+                reset?.classList.remove(ACTIVE_CLASS);
+            } else {
+                reset?.classList.add(ACTIVE_CLASS);
+                alert?.classList.remove(ACTIVE_CLASS);
+            }
+        });
+
+        reset?.addEventListener('click', () => {
+            if (input) {
+                input.value = '';
+                reset?.classList.remove(ACTIVE_CLASS);
+            }
+        });
+    });
+})();
+
 //# sourceMappingURL=index.js.map

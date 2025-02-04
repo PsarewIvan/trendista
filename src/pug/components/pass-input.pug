@@ -1,0 +1,17 @@
+include ../icons/icon-eye-closed.pug
+include ../icons/icon-eye-open.pug
+
+mixin pass-input({label, size='m', placeholder, className, forceAlert})
+    - var classes = size + ' ' + className;
+    - var inputForceClass = forceAlert ? 'text-input__input_force-alert' : ''
+
+    .text-input.js-pass-input-node(class=classes)
+        if label
+            .text-input__label= label
+        .text-input__input-wrapper
+            input.text-input__input.js-pass-input(class=inputForceClass type="password" placeholder=placeholder)
+            button.text-input__show.js-pass-input-show(type="button")
+                +icon-eye-closed('text-input__icon js-pass-input-icon-closed')
+                +icon-eye-open('text-input__icon text-input__icon_open js-pass-input-icon-open hidden')
+        if forceAlert
+            .text-input__force-alert= forceAlert

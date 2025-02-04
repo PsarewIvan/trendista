@@ -18,5 +18,10 @@ html
         block footer
             include includes/footer.pug
 
+        block popup
+            include components/popup-auth.pug
+
+            +popup-auth()
+
     script(src='libs/itc.js')
     script(src="js/index.js")

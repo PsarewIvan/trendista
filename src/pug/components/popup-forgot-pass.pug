@@ -4,21 +4,18 @@ include ../components/text-input.pug
 include ../components/pass-input.pug
 include ../components/checkbox.pug
 
-mixin popup-auth()
-    .popup-auth.hidden.js-popup-auth
+mixin popup-forgot-pass()
+    .popup-auth.hidden.js-popup-forgot-pass
         .popup-auth__box
             .popup-auth__header
                 button.popup-auth__button.js-close-popup(type="button")
                     +icon-cross('popup-auth__icon')
             .popup-auth__content
                 .popup-auth__content-title-wrapper
-                    .popup-auth__content-title Вход в личный кабинет
-                    .popup-auth__content-sub-title.hidden Введите пароль, который мы отправили вам на email
+                    .popup-auth__content-title Забыли пароль?
+                    .popup-auth__content-sub-title Введите адрес электронной почты указанные при регистрации, и мы вышлем вам пароль
                 form.popup-auth__form(action="")
                     +text-input({ alert: 'Не указан email', placeholder: 'Укажите ваш email', className: 'popup-auth__form-email'})
-                    +pass-input({placeholder: 'Пароль', alert: 'Не указан пароль', className: 'popup-auth__form-pass'})
-                    button.popup-auth__button-link.js-auth-button-forgot(type='button') Забыли пароль?
-                    +checkbox('popup-auth__checkbox')
                     img.popup-auth__captcha(src='img/captcha.png')
                     +button({text: 'Войти', size: 'l', className: 'popup-auth__apply-button'})
                 .popup-auth__login

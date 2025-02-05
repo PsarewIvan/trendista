@@ -20,8 +20,12 @@ html
 
         block popup
             include components/popup-auth.pug
+            include components/popup-forgot-pass.pug
+            include components/popup-login.pug
 
             +popup-auth()
+            +popup-forgot-pass()
+            +popup-login()
 
     script(src='libs/itc.js')
     script(src="js/index.js")

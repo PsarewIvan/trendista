@@ -1,7 +1,7 @@
 include ../icons/icon-eye-closed.pug
 include ../icons/icon-eye-open.pug
 
-mixin pass-input({label, size='m', placeholder, className, forceAlert})
+mixin pass-input({label, size='m', placeholder, className, forceAlert, alert, addon})
     - var classes = size + ' ' + className;
     - var inputForceClass = forceAlert ? 'text-input__input_force-alert' : ''
 
@@ -13,5 +13,9 @@ mixin pass-input({label, size='m', placeholder, className, forceAlert})
             button.text-input__show.js-pass-input-show(type="button")
                 +icon-eye-closed('text-input__icon js-pass-input-icon-closed')
                 +icon-eye-open('text-input__icon text-input__icon_open js-pass-input-icon-open hidden')
+        if alert
+            .text-input__alert.js-pass-input-alert= alert
+        if addon
+            .text-input__addon= addon
         if forceAlert
             .text-input__force-alert= forceAlert

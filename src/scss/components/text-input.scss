@@ -109,6 +109,12 @@
         }
     }
 
+    &__addon {
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
     &__sub-text {
         margin-top: 4px;
         color: vars.$text-secondary;

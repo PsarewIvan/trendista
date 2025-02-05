@@ -135,15 +135,15 @@ class ItcAccordion {
     const authButtons = document.querySelectorAll('.js-auth-button');
 
     const popup = document.querySelector('.js-popup-auth');
-    // const popupForgotPass = document.querySelector('.js-popup-forgot-pass');
-    // const popupLogin = document.querySelector('.js-popup-login');
+    const popupForgotPass = document.querySelector('.js-popup-forgot-pass');
+    const popupLogin = document.querySelector('.js-popup-login');
     // const popupSuccess = document.querySelector('.js-popup-success');
 
     const closePopupButtons = document.querySelectorAll('.js-close-popup');
-    // const forgotPassButtons = document.querySelectorAll(
-    //     '.js-auth-button-forgot'
-    // );
-    // const loginButtons = document.querySelectorAll('.js-login-button');
+    const forgotPassButtons = document.querySelectorAll(
+        '.js-auth-button-forgot'
+    );
+    const loginButtons = document.querySelectorAll('.js-login-button');
     // const successButtons = document.querySelectorAll('.js-success-button');
 
     closePopupButtons.forEach((button) => {
@@ -151,22 +151,25 @@ class ItcAccordion {
     });
 
     authButtons.forEach((button) => {
-        button?.addEventListener('click', openPopup(popup));
+        button?.addEventListener('click', () => {
+            closeAllPopup();
+            openPopup(popup)();
+        });
     });
 
-    // forgotPassButtons.forEach((button) => {
-    //     button?.addEventListener('click', () => {
-    //         closeAllPopup();
-    //         // openPopup(popupForgotPass)();
-    //     });
-    // });
+    forgotPassButtons.forEach((button) => {
+        button?.addEventListener('click', () => {
+            closeAllPopup();
+            openPopup(popupForgotPass)();
+        });
+    });
 
-    // loginButtons.forEach((button) => {
-    //     button?.addEventListener('click', () => {
-    //         closeAllPopup();
-    //         // openPopup(popupLogin)();
-    //     });
-    // });
+    loginButtons.forEach((button) => {
+        button?.addEventListener('click', () => {
+            closeAllPopup();
+            openPopup(popupLogin)();
+        });
+    });
 
     // successButtons.forEach((button) => {
     //     button?.addEventListener('click', () => {
@@ -176,14 +179,14 @@ class ItcAccordion {
     // });
 
     popup?.addEventListener('click', overlayClose(popup));
-    // popupForgotPass?.addEventListener('click', overlayClose(popupForgotPass));
-    // popupLogin?.addEventListener('click', overlayClose(popupLogin));
+    popupForgotPass?.addEventListener('click', overlayClose(popupForgotPass));
+    popupLogin?.addEventListener('click', overlayClose(popupLogin));
     // popupSuccess?.addEventListener('click', overlayClose(popupSuccess));
 
     function closeAllPopup() {
         closePopup(popup)();
-        // closePopup(popupForgotPass)();
-        // closePopup(popupLogin)();
+        closePopup(popupForgotPass)();
+        closePopup(popupLogin)();
         // closePopup(popupSuccess)();
     }
 
@@ -245,6 +248,7 @@ class ItcAccordion {
 })();
 
 (() => {
+    const ACTIVE_CLASS = 'active';
     const nodes = document.querySelectorAll('.js-pass-input-node');
 
     nodes.forEach((node) => {
@@ -252,6 +256,7 @@ class ItcAccordion {
         const show = node.querySelector('.js-pass-input-show');
         const openIcon = node.querySelector('.js-pass-input-icon-open');
         const closedIcon = node.querySelector('.js-pass-input-icon-closed');
+        const alert = node.querySelector('.js-pass-input-alert');
 
         show?.addEventListener('click', () => {
             const type = input?.getAttribute('type');
@@ -264,6 +269,25 @@ class ItcAccordion {
                 input.setAttribute('type', 'password');
                 openIcon?.classList.add('hidden');
                 closedIcon?.classList.remove('hidden');
+            }
+        });
+
+        input?.addEventListener('blur', (event) => {
+            console.log('[blur]', alert);
+
+            if (event.target.value === '') {
+                alert?.classList.add(ACTIVE_CLASS);
+            } else {
+                alert?.classList.remove(ACTIVE_CLASS);
+            }
+        });
+
+        input?.addEventListener('input', (event) => {
+            if (event.target.value === '') {
+                reset?.classList.remove(ACTIVE_CLASS);
+            } else {
+                reset?.classList.add(ACTIVE_CLASS);
+                alert?.classList.remove(ACTIVE_CLASS);
             }
         });
     });

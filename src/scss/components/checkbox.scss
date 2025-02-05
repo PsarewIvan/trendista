@@ -66,8 +66,8 @@
     }
 
     &__alert {
-        margin-top: 2px;
-        padding-left: 32px;
+        display: none;
+        margin-top: 4px;
         font-size: 14px;
         line-height: 20px;
         color: vars.$red-500;
@@ -82,5 +82,15 @@
         color: vars.$background-primary;
         opacity: 0;
         transition: opacity 0.2s;
+    }
+
+    input.alert + label {
+        &::before {
+            border-color: vars.$red-500;
+        }
+
+        .checkbox__alert {
+            display: block;
+        }
     }
 }

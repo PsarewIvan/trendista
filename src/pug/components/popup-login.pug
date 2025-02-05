@@ -1,0 +1,35 @@
+include ../icons/icon-cross.pug
+include ../components/button.pug
+include ../components/text-input.pug
+include ../components/pass-input.pug
+include ../components/checkbox.pug
+
+mixin popup-login()
+    .popup-auth.hidden.js-popup-login
+        .popup-auth__box
+            .popup-auth__header
+                button.popup-auth__button.js-close-popup(type="button")
+                    +icon-cross('popup-auth__icon')
+            .popup-auth__content
+                .popup-auth__content-title-wrapper
+                    .popup-auth__content-title Новый аккаунт
+                    .popup-auth__content-sub-title В личном кабинете вы сможете оформить подписку, которая дает доступ к ежемесячным отчетам beauty индустрии
+                form.popup-auth__form(action="")
+                    +text-input({ alert: 'Не указан email', placeholder: 'Укажите ваш email', className: 'popup-auth__form-email'})
+                    +pass-input({placeholder: 'Придумайте пароль', alert: 'Не указан пароль', addon: 'Пароль должен быть не менее 8 символов', className: 'popup-auth__form-pass'})
+                    button.popup-auth__button-link.js-auth-button-forgot(type='button') Забыли пароль?
+                    .checkbox-wrapper.popup-auth__checkbox
+                        .checkbox
+                            input(type="checkbox" id='checkbox-access-oferta' name='auth-oferta' checked=false)
+                            label.checkbox__label(for='checkbox-access-oferta')
+                                +icon-ok('checkbox__icon-ok')
+                                div Я подтверждаю, что ознакомлен с условиями
+                                a(href='/') Пользовательского соглашения
+                                span  и соглашаюсь с 
+                                a(href='/') Правилами использования и обработки персональных данных
+                                .checkbox__alert Необходимо ваше подтверждение
+                    img.popup-auth__captcha(src='img/captcha.png')
+                    +button({text: 'Войти', size: 'l', className: 'popup-auth__apply-button'})
+                .popup-auth__login
+                    span Уже есть аккаунт?
+                    button.popup-auth__login-button.js-auth-button(type='button') Войдите

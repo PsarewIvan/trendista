@@ -1,0 +1,38 @@
+extends ../layout.pug
+
+block variables
+    - var hasLogin = 'true'
+
+block content
+    include ../components/button.pug
+    include ../icons/icon-curet.pug
+    include ../icons/icon-plus.pug
+    include ../icons/icon-minus.pug
+
+    main.main
+        section.section.details
+            h1.details__title Реквизиты
+            .details-table
+                .details-table__header ИП Мох Эльвира Камилевна
+                .details-table__list
+                    .details-table__element
+                        .details-table__element-text ИНН
+                        .details-table__element-text 027412150755
+                    .details-table__element
+                        .details-table__element-text ОГРНИП
+                        .details-table__element-text 322028000060749
+                    .details-table__element
+                        .details-table__element-text Адрес
+                        .details-table__element-text 450 105, Респ. Башкортостан, г. Уфа, ул. Академика Королева, д. 8
+                    .details-table__element
+                        .details-table__element-text Расчетный счет
+                        .details-table__element-text 40802 810 7 0600 0057881
+                    .details-table__element
+                        .details-table__element-text БИК
+                        .details-table__element-text 048073601
+                    .details-table__element
+                        .details-table__element-text Банк
+                        .details-table__element-text ПАО Сбербанк
+                    .details-table__element
+                        .details-table__element-text Корсчёт
+                        .details-table__element-text 30101 810 3 0000 0000601

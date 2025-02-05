@@ -1,0 +1,102 @@
+@use '../vars.scss';
+
+.agreement {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 64px 0 !important;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include vars.tablet {
+        padding: 24px 0 !important;
+    }
+
+    @include vars.mobile {
+        padding: 16px 0 !important;
+    }
+
+    &__title-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 44px;
+
+        @include vars.mobile {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &__content-sub-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+
+        @include vars.mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content-title {
+        margin: 0 0 16px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    &__separator {
+        width: 100%;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    p {
+        margin: 0 0 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: vars.$link-600;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        padding-left: 24px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: vars.$red-500;
+        }
+    }
+}

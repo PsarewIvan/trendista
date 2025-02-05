@@ -1,0 +1,83 @@
+@use '../vars.scss';
+
+.details {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 64px 0 !important;
+
+    @include vars.tablet {
+        padding: 24px 0 !important;
+    }
+
+    @include vars.mobile {
+        padding: 16px 0 24px !important;
+    }
+
+    &__title {
+        margin: 0 0 32px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 44px;
+
+        @include vars.mobile {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+}
+
+.details-table {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        padding: 24px;
+        border-bottom: 2px solid vars.$darkner-8;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+
+        @include vars.mobile {
+            padding: 12px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__element {
+        display: grid;
+        grid-template-columns: 240fr 528fr;
+
+        @include vars.mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &:nth-child(2n + 2) {
+            background-color: vars.$darkner-4;
+        }
+    }
+
+    &__element-text {
+        padding: 12px 24px;
+        font-size: 20px;
+        line-height: 32px;
+
+        @include vars.mobile {
+            &:nth-child(1) {
+                padding: 8px 8px 2px;
+            }
+
+            &:nth-child(2) {
+                padding: 2px 8px 8px;
+            }
+        }
+    }
+}

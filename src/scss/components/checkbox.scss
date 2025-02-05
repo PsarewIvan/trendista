@@ -63,6 +63,11 @@
             box-sizing: border-box;
             transition: all 0.2s;
         }
+
+        a {
+            text-decoration: none;
+            color: vars.$link-600;
+        }
     }
 
     &__alert {

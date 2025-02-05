@@ -294,6 +294,15 @@ class ItcAccordion {
 })();
 
 (() => {
+    const slider = new Splide('.splide', {
+        arrows: false,
+        pagination: false,
+    });
+
+    slider.mount();
+})();
+
+(() => {
     const ACTIVE_CLASS = 'active';
 
     const nodes = document.querySelectorAll('.js-text-input-node');

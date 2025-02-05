@@ -1,0 +1,21 @@
+@use '../vars.scss';
+
+.splide__list {
+    display: flex;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vars.tablet {
+        gap: 24px;
+    }
+
+    @include vars.mobile {
+        gap: 16px;
+    }
+
+    & ~ span {
+        display: none;
+    }
+}

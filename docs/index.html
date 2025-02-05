@@ -7,6 +7,7 @@
     <meta content="" name="Keywords">
     <meta content="index,follow" name="robots">
     <title>Trendista Global</title>
+    <link rel="stylesheet" href="libs/splide-core-min.css">
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
@@ -258,56 +259,60 @@
         </div>
       </section>
       <section class="section blog">
-        <div class="blog__content">
-          <div class="blog-item">
-            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo1.jpg"></div>
-            <div class="blog-item__content">
-              <div class="blog-item__tags">
-                <div class="blog-item__tag blog-item__tag_blue">Новости</div>
-                <div class="blog-item__time">12 января 2025</div>
-              </div><a class="blog-item__title" href="/">Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка</a>
-              <div class="blog-item__text">Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.</div>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo2.jpg"></div>
-            <div class="blog-item__content">
-              <div class="blog-item__tags">
-                <div class="blog-item__tag blog-item__tag_green">Лайфхаки</div>
-                <div class="blog-item__time">12 января 2025</div>
-              </div><a class="blog-item__title" href="/">5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки</a>
-              <div class="blog-item__text">Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли</div>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo3.jpg"></div>
-            <div class="blog-item__content">
-              <div class="blog-item__tags">
-                <div class="blog-item__tag blog-item__tag_red">Стратегия</div>
-                <div class="blog-item__time">12 января 2025</div>
-              </div><a class="blog-item__title" href="/">Анализ ваших показателей: как понять, что пора менять стратегию</a>
-              <div class="blog-item__text">Бизнес-коуч делится методиками анализа динамики выручки и визитов, помогая разработать успешный план действий для роста вашего бизнеса</div>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo1.jpg"></div>
-            <div class="blog-item__content">
-              <div class="blog-item__tags">
-                <div class="blog-item__tag blog-item__tag_blue">Новости</div>
-                <div class="blog-item__time">12 января 2025</div>
-              </div><a class="blog-item__title" href="/">Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка</a>
-              <div class="blog-item__text">Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.</div>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo2.jpg"></div>
-            <div class="blog-item__content">
-              <div class="blog-item__tags">
-                <div class="blog-item__tag blog-item__tag_green">Лайфхаки</div>
-                <div class="blog-item__time">12 января 2025</div>
-              </div><a class="blog-item__title" href="/">5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки</a>
-              <div class="blog-item__text">Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли</div>
-            </div>
+        <div class="blog__content slider splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="blog-item splide__slide">
+                <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo1.jpg"></div>
+                <div class="blog-item__content">
+                  <div class="blog-item__tags">
+                    <div class="blog-item__tag blog-item__tag_blue">Новости</div>
+                    <div class="blog-item__time">12 января 2025</div>
+                  </div><a class="blog-item__title" href="/">Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка</a>
+                  <div class="blog-item__text">Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.</div>
+                </div>
+              </li>
+              <li class="blog-item splide__slide">
+                <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo2.jpg"></div>
+                <div class="blog-item__content">
+                  <div class="blog-item__tags">
+                    <div class="blog-item__tag blog-item__tag_green">Лайфхаки</div>
+                    <div class="blog-item__time">12 января 2025</div>
+                  </div><a class="blog-item__title" href="/">5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки</a>
+                  <div class="blog-item__text">Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли</div>
+                </div>
+              </li>
+              <li class="blog-item splide__slide">
+                <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo3.jpg"></div>
+                <div class="blog-item__content">
+                  <div class="blog-item__tags">
+                    <div class="blog-item__tag blog-item__tag_red">Стратегия</div>
+                  </div>
+                  <div class="blog-item__time">12 января 2025</div><a class="blog-item__title" href="/">Анализ ваших показателей: как понять, что пора менять стратегию</a>
+                  <div class="blog-item__text">Бизнес-коуч делится методиками анализа динамики выручки и визитов, помогая разработать успешный план действий для роста вашего бизнеса</div>
+                </div>
+              </li>
+              <li class="blog-item splide__slide">
+                <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo1.jpg"></div>
+                <div class="blog-item__content">
+                  <div class="blog-item__tags">
+                    <div class="blog-item__tag blog-item__tag_blue">Новости</div>
+                  </div>
+                  <div class="blog-item__time">12 января 2025</div><a class="blog-item__title" href="/">Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка</a>
+                  <div class="blog-item__text">Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.</div>
+                </div>
+              </li>
+              <li class="blog-item splide__slide">
+                <div class="blog-item__img-wrapper"><img class="blog-item__img" src="img/photo2.jpg"></div>
+                <div class="blog-item__content">
+                  <div class="blog-item__tags">
+                    <div class="blog-item__tag blog-item__tag_green">Лайфхаки</div>
+                    <div class="blog-item__time">12 января 2025</div>
+                  </div><a class="blog-item__title" href="/">5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки</a>
+                  <div class="blog-item__text">Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли</div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -488,6 +493,6 @@
           </div>
         </div>
   </body>
-  <script src="libs/itc.js"></script>
+  <script src="libs/splide.min.js"></script>
   <script src="js/index.js"></script>
 </html>

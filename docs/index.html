@@ -13,9 +13,9 @@
     <header class="header">
       <div class="header__content"><a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.svg"></a>
         <ul class="header__links">
-          <li><a class="header__link" href="">Данные</a></li>
-          <li><a class="header__link" href="">Вопросы и ответы</a></li>
-          <li><a class="header__link" href="">Тарифы</a></li>
+          <li><a class="header__link" href="#data">Данные</a></li>
+          <li><a class="header__link" href="#question">Вопросы и ответы</a></li>
+          <li><a class="header__link" href="#tariff">Тарифы</a></li>
         </ul>
         <div class="header__login">
               <button class="button l secondary js-auth-button" type="button">Войти
@@ -25,17 +25,19 @@
     </header>
     <main class="main">
       <section class="section promo">
-        <p class="promo__text">Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?</p>
-        <h1 class="heading1">Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном</h1>
-        <div>
-              <button class="button l primary " type="button">Узнать больше
-              </button>
+        <div class="promo__content">
+          <p class="promo__text">Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?</p>
+          <h1 class="heading1">Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном</h1>
+          <div>
+                <button class="button l primary " type="button">Узнать больше
+                </button>
+          </div>
         </div>
       </section>
       <section class="section description">
         <p class="description__text">Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка</p>
       </section>
-      <section class="section reports">
+      <section class="section reports" id="data">
         <h2 class="heading2">Ежемесячные отчёты</h2>
         <div class="reports-grid">
           <div class="reports-grid__block">
@@ -110,11 +112,11 @@
         </div>
         <div class="reports__description">Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.</div>
       </section>
-      <section class="section questions">
+      <section class="section questions" id="question">
         <h2 class="heading2">Вопросы и ответы</h2>
         <div class="accordion js-accordion">
           <div class="accordion__item">
-            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>1.</span><span>По каким показателям я получу статистику?</span></span>
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span class="accordion__item-number">1.</span><span>По каким показателям я получу статистику?</span></span>
               <div class="accordion__header-icon-wrapper">
                     <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
                       <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
@@ -137,7 +139,7 @@
             </div>
           </div>
           <div class="accordion__item">
-            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>2.</span><span>Чем мне поможет чужая статистика? Мне важны свои показатели.</span></span>
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span class="accordion__item-number">2.</span><span>Чем мне поможет чужая статистика? Мне важны свои показатели.</span></span>
               <div class="accordion__header-icon-wrapper">
                     <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
                       <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
@@ -152,7 +154,7 @@
             </div>
           </div>
           <div class="accordion__item">
-            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>3.</span><span>Откуда вы берете данные для обработки?</span></span>
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span class="accordion__item-number">3.</span><span>Откуда вы берете данные для обработки?</span></span>
               <div class="accordion__header-icon-wrapper">
                     <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
                       <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
@@ -167,7 +169,7 @@
             </div>
           </div>
           <div class="accordion__item">
-            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>4.</span><span>Будут ли расширяться статистические показатели?</span></span>
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span class="accordion__item-number">4.</span><span>Будут ли расширяться статистические показатели?</span></span>
               <div class="accordion__header-icon-wrapper">
                     <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
                       <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
@@ -182,7 +184,7 @@
             </div>
           </div>
           <div class="accordion__item">
-            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span>5.</span><span>Могу ли я сделать выборку по своему региону или направлению?</span></span>
+            <div class="accordion__header js-accordion-header"><span class="accordion__header-text"><span class="accordion__item-number">5.</span><span>Могу ли я сделать выборку по своему региону или направлению?</span></span>
               <div class="accordion__header-icon-wrapper">
                     <svg class="accordion__icon accordion__icon_plus" width="32" height="32" viewBox="0 0 32 32" fill="none">
                       <path d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z" fill="currentColor"></path>
@@ -217,7 +219,7 @@
           <div class="statistics__description">* До тридцати показателей будет введено в статистические данные в течении 2025 года</div>
         </div>
       </section>
-      <section class="section access">
+      <section class="section access" id="tariff">
         <div class="access__content">
           <div class="access__title">
             <h2 class="heading2">Получите доступ к статистике, чтобы всегда оставаться впереди</h2>

@@ -4,14 +4,51 @@
     display: flex;
     flex-direction: column;
     padding: 96px 0;
+
+    @include vars.tablet {
+        padding: 48px 0;
+    }
+
+    @include vars.mobile {
+        padding: 24px 0;
+    }
 }
 
 .promo {
+    width: 100vw;
+    margin-left: calc((1152px - 100vw) / 2);
     padding: 64px 0 192px;
     background-image: url('../img/graph.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 1152px;
     background-position: bottom;
+
+    @include vars.tablet {
+        margin-left: -24px;
+        background-size: auto 294px;
+        background-position: 144px bottom;
+    }
+
+    @include vars.mobile {
+        margin-left: -16px;
+        padding: 24px 0 192px;
+        background-position: bottom;
+        background-size: auto 196px;
+    }
+
+    &__content {
+        max-width: 1200px;
+        padding: 0 24px;
+        margin: 0 auto;
+
+        @include vars.mobile {
+            padding: 0 16px;
+        }
+    }
+
+    @include vars.tablet {
+        padding: 48px 0 192px;
+    }
 
     &__text {
         position: relative;
@@ -19,13 +56,19 @@
         padding-left: 44px;
         margin: 0 0 32px;
         font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+
+        @include vars.mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
 
         &::after {
             content: '';
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 14px;
             width: 32px;
             height: 4px;
             border-radius: 20px;
@@ -39,22 +82,47 @@
     margin-left: calc((1152px - 100vw) / 2);
     background-color: vars.$red-500;
 
+    @include vars.tablet {
+        margin-left: -24px;
+        background-size: auto 294px;
+        background-position: 144px bottom;
+    }
+
+    @include vars.mobile {
+        margin-left: -16px;
+    }
+
     &__text {
-        max-width: 1176px;
-        padding: 0 12px;
+        max-width: 1200px;
+        padding: 0 24px;
         margin: 0 auto;
         font-size: 32px;
         font-weight: 600;
         line-height: 44px;
         color: vars.$text-primary-invert;
+
+        @include vars.mobile {
+            padding: 0 16px;
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
 }
 
 .reports {
     gap: 32px;
 
+    @include vars.mobile {
+        gap: 24px;
+    }
+
     &__description {
         max-width: 720px;
+
+        @include vars.mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 }
 
@@ -64,6 +132,16 @@
     grid-template-rows: 1fr 1fr;
     gap: 32px;
 
+    @include vars.tablet {
+        gap: 24px;
+    }
+
+    @include vars.mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
     &__block {
         display: flex;
         flex-direction: column;
@@ -71,6 +149,10 @@
         padding: 32px;
         border-radius: 2px;
         background-color: vars.$darkner-4;
+
+        @include vars.tablet {
+            gap: 32px;
+        }
 
         &:first-child {
             grid-row: 1 / 3;
@@ -91,6 +173,11 @@
             .reports-grid__prices {
                 flex-direction: row;
                 gap: 48px;
+
+                @include vars.mobile {
+                    justify-content: space-between;
+                    gap: 24px;
+                }
             }
 
             .reports-grid__price {
@@ -104,12 +191,25 @@
     &__title-block {
         display: flex;
         padding-bottom: 40px;
+
+        @include vars.tablet {
+            padding-bottom: 32px;
+        }
+
+        @include vars.mobile {
+            padding-bottom: 0;
+        }
     }
 
     &__title {
         font-size: 32px;
         font-weight: 600;
         line-height: 44px;
+
+        @include vars.mobile {
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
 
     &__prices {
@@ -117,12 +217,22 @@
         flex-direction: column;
         gap: 32px;
         margin-top: auto;
+
+        @include vars.mobile {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 24px;
+        }
     }
 
     &__prices-block {
         display: flex;
         flex-direction: column;
         gap: 4px;
+
+        @include vars.mobile {
+            gap: 8px;
+        }
     }
 
     &__price-text {
@@ -138,6 +248,12 @@
         font-weight: 400;
         line-height: 58px;
 
+        @include vars.mobile {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+
         &_red {
             color: vars.$red-500;
         }
@@ -151,10 +267,19 @@
         width: 32px;
         height: 32px;
 
+        @include vars.mobile {
+            width: 24px;
+            height: 24px;
+        }
+
         &_revert {
             transform: rotate(180deg);
         }
     }
+}
+
+.questions {
+    gap: 32px;
 }
 
 .statistics {
@@ -163,18 +288,46 @@
     background-color: vars.$text-primary;
     color: vars.$text-primary-invert;
 
+    @include vars.tablet {
+        padding-bottom: 24px;
+        margin-left: -24px;
+    }
+
+    @include vars.mobile {
+        padding-bottom: 16px;
+        margin-left: -16px;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         gap: 64px;
-        max-width: 1176px;
-        padding: 0 12px;
+        max-width: 1200px;
+        padding: 0 24px;
         margin: 0 auto;
+
+        @include vars.tablet {
+            gap: 32px;
+        }
+
+        @include vars.mobile {
+            padding: 0 16px;
+            gap: 24px;
+        }
     }
 
     &__blocks {
         display: flex;
         gap: 64px;
+
+        @include vars.tablet {
+            gap: 24px;
+        }
+
+        @include vars.mobile {
+            flex-direction: column;
+            gap: 12px;
+        }
     }
 
     &__block {
@@ -186,11 +339,22 @@
         font-size: 68px;
         line-height: 82px;
         letter-spacing: -1.36px;
+
+        @include vars.tablet {
+            font-size: 48px;
+            line-height: 58px;
+            letter-spacing: 0;
+        }
     }
 
     &__block-text {
         font-size: 20px;
         line-height: 32px;
+
+        @include vars.tablet {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     &__description {
@@ -198,6 +362,11 @@
         border-top: 2px solid rgba(255, 255, 255, 0.24);
         color: vars.$background-primary;
         opacity: 0.72;
+
+        @include vars.tablet {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 }
 
@@ -210,13 +379,33 @@
     background-size: contain;
     background-position: bottom center;
 
+    @include vars.tablet {
+        padding-top: 64px;
+        margin-left: -24px;
+        background-size: auto 460px;
+    }
+
+    @include vars.mobile {
+        padding-top: 24px;
+        margin-left: -16px;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         gap: 32px;
-        max-width: 1176px;
+        max-width: 1200px;
         padding: 0 12px;
         margin: 0 auto;
+
+        @include vars.tablet {
+            gap: 32px;
+            padding: 0 24px;
+        }
+
+        @include vars.mobile {
+            padding: 0 16px;
+        }
     }
 
     &__title {
@@ -229,6 +418,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px;
+
+        @include vars.mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
     }
 }
 
@@ -261,6 +456,7 @@
         display: flex;
         align-items: baseline;
         gap: 4px;
+        margin-top: auto;
     }
 
     &__price-number {
@@ -280,6 +476,16 @@
     padding-bottom: 128px;
     margin-left: calc((1152px - 100vw) / 2);
 
+    @include vars.tablet {
+        margin-left: -24px;
+        padding-bottom: 48px;
+    }
+
+    @include vars.mobile {
+        margin-left: -16px;
+        padding-bottom: 24px;
+    }
+
     &__content {
         overflow: scroll;
         display: flex;
@@ -287,6 +493,15 @@
         max-width: 100vw;
         padding: 0 calc((100vw - 1152px) / 2);
         margin: 0 auto;
+
+        @include vars.tablet {
+            gap: 24px;
+            padding: 0 24px;
+        }
+
+        @include vars.mobile {
+            padding: 0 16px;
+        }
 
         &::-webkit-scrollbar {
             width: 8px;
@@ -311,6 +526,10 @@
     flex-shrink: 0;
     width: 480px;
 
+    @include vars.mobile {
+        width: 328px;
+    }
+
     &__img-wrapper {
         display: flex;
     }
@@ -319,6 +538,10 @@
         width: 480px;
         height: 400px;
         object-fit: cover;
+
+        @include vars.mobile {
+            width: 328px;
+        }
     }
 
     &__content {

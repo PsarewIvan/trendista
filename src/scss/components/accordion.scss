@@ -24,6 +24,14 @@
         &:nth-child(5n + 5) {
             background-color: #f8aaa7;
         }
+
+        @include vars.mobile {
+            padding: 24px;
+        }
+
+        @include vars.mobile {
+            padding: 16px;
+        }
     }
 
     &__header {
@@ -35,15 +43,28 @@
         line-height: 32px;
         cursor: pointer;
         transition: all 0.2s;
+
+        @include vars.mobile {
+            gap: 16px;
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     &__header-text {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         gap: 20px;
     }
 
+    &__item-number {
+        @include vars.mobile {
+            display: none;
+        }
+    }
+
     &__header-icon-wrapper {
+        align-self: center;
         flex-shrink: 0;
         width: 48px;
         height: 48px;
@@ -52,6 +73,11 @@
         justify-content: center;
         border-radius: 2px;
         transition: all 0.2s;
+
+        @include vars.mobile {
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &__icon {
@@ -59,6 +85,11 @@
         height: 32px;
         color: vars.$text-primary;
         transition: all 0.2s;
+
+        @include vars.mobile {
+            width: 24px;
+            height: 24px;
+        }
 
         &_minus {
             display: none;
@@ -100,8 +131,12 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-top: 12px;
+    margin-top: 20px;
     margin-right: 56px;
+
+    @include vars.mobile {
+        margin-right: 0;
+    }
 
     ul {
         display: flex;
@@ -115,6 +150,10 @@
             position: relative;
             padding-left: 36px;
 
+            @include vars.mobile {
+                padding-left: 24px;
+            }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -125,6 +164,11 @@
                 height: 4px;
                 border-radius: 20px;
                 background-color: vars.$red-500;
+
+                @include vars.mobile {
+                    width: 16px;
+                    height: 2px;
+                }
             }
         }
     }

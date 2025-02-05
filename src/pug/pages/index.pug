@@ -11,15 +11,16 @@ block content
 
     main.main
         section.section.promo
-            p.promo__text Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?
-            h1.heading1 Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном
-            div
-                +button({text: 'Узнать больше', size: 'l'})
+            .promo__content
+                p.promo__text Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?
+                h1.heading1 Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном
+                div
+                    +button({text: 'Узнать больше', size: 'l'})
 
         section.section.description
             p.description__text Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка
 
-        section.section.reports
+        section.section.reports(id="data")
             h2.heading2 Ежемесячные отчёты
             .reports-grid
                 .reports-grid__block
@@ -66,13 +67,13 @@ block content
                                 span 37,02 %
             .reports__description Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.
 
-        section.section.questions
+        section.section.questions(id="question")
             h2.heading2 Вопросы и ответы
             .accordion.js-accordion
                 .accordion__item
                     .accordion__header.js-accordion-header
                         span.accordion__header-text
-                            span 1.
+                            span.accordion__item-number 1.
                             span По каким показателям я получу статистику?
                         .accordion__header-icon-wrapper
                             +icon-plus('accordion__icon accordion__icon_plus')
@@ -88,7 +89,7 @@ block content
                 .accordion__item
                     .accordion__header.js-accordion-header
                         span.accordion__header-text
-                            span 2.
+                            span.accordion__item-number 2.
                             span Чем мне поможет чужая статистика? Мне важны свои показатели.
                         .accordion__header-icon-wrapper
                             +icon-plus('accordion__icon accordion__icon_plus')
@@ -98,7 +99,7 @@ block content
                 .accordion__item
                     .accordion__header.js-accordion-header
                         span.accordion__header-text
-                            span 3.
+                            span.accordion__item-number 3.
                             span Откуда вы берете данные для обработки?
                         .accordion__header-icon-wrapper
                             +icon-plus('accordion__icon accordion__icon_plus')
@@ -108,7 +109,7 @@ block content
                 .accordion__item
                     .accordion__header.js-accordion-header
                         span.accordion__header-text
-                            span 4.
+                            span.accordion__item-number 4.
                             span Будут ли расширяться статистические показатели?
                         .accordion__header-icon-wrapper
                             +icon-plus('accordion__icon accordion__icon_plus')
@@ -118,7 +119,7 @@ block content
                 .accordion__item
                     .accordion__header.js-accordion-header
                         span.accordion__header-text
-                            span 5.
+                            span.accordion__item-number 5.
                             span Могу ли я сделать выборку по своему региону или направлению?
                         .accordion__header-icon-wrapper
                             +icon-plus('accordion__icon accordion__icon_plus')
@@ -140,7 +141,7 @@ block content
                         .statistics__block-text клиентов отмечают улучшение стратегии после анализа статистики
                 .statistics__description * До тридцати показателей будет введено в статистические данные в течении 2025 года
 
-        section.section.access
+        section.section.access(id="tariff")
             .access__content
                 .access__title
                     h2.heading2 Получите доступ к статистике, чтобы всегда оставаться впереди

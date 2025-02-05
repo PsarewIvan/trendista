@@ -28,15 +28,25 @@ body {
     font-family: vars.$main-font;
     color: vars.$text-primary;
     background-color: vars.$background-primary;
+
+    @include vars.mobile {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .main {
     display: flex;
     flex-direction: column;
-    max-width: 1176px;
+    max-width: 1200px;
     min-height: calc(100vh - 432px);
-    padding: 0 12px 0;
+    padding: 0 24px;
     margin: 100px auto 0;
+
+    @include vars.mobile {
+        padding: 0 16px;
+        margin-top: 80px;
+    }
 }
 
 .heading1 {
@@ -44,6 +54,13 @@ body {
     font-size: 32px;
     font-weight: 600;
     line-height: 44px;
+
+    @include vars.mobile {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 44px;
+        margin-bottom: 24px;
+    }
 }
 
 .heading2 {
@@ -51,6 +68,10 @@ body {
     font-size: 32px;
     font-weight: 600;
     line-height: 44px;
+
+    @include vars.mobile {
+        font-weight: 700;
+    }
 }
 
 .sub-heading {

@@ -11,33 +11,51 @@
     align-items: center;
     background-color: vars.$background-primary;
 
+    @include vars.mobile {
+        min-height: 80px;
+    }
+
     &__logo {
         display: flex;
         align-items: center;
+        margin-right: auto;
     }
 
     &__logo-img {
         width: 197px;
         height: 32px;
         object-fit: contain;
+
+        @include vars.mobile {
+            width: 173px;
+            height: 28px;
+        }
     }
 
     &__content {
         display: flex;
         align-items: center;
         gap: 24px;
-        max-width: 1176px;
+        max-width: 1200px;
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        padding: 0 12px;
+        padding: 0 24px;
+
+        @include vars.mobile {
+            padding: 0 16px;
+        }
     }
 
     &__links {
         display: flex;
         padding: 0;
-        margin: 0 0 0 auto;
+        margin: 0;
         list-style: none;
+
+        @include vars.tablet {
+            display: none;
+        }
     }
 
     &__link {

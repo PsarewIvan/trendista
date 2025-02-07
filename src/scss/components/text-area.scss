@@ -1,0 +1,61 @@
+@use '../vars.scss';
+
+.text-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        margin-bottom: 4px;
+        color: vars.$text-secondary;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__input {
+        resize: none;
+        height: 128px;
+        padding: 12px;
+        border-radius: 2px;
+        border: 2px solid vars.$darkner-16;
+        background: vars.$background-primary;
+        color: vars.$text-primary;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 24px;
+        transition: all 0.2s;
+
+        &::placeholder {
+            color: vars.$text-third;
+        }
+
+        &:hover {
+            border-color: vars.$darkner-24;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom-color: vars.$link-500;
+        }
+
+        &:disabled {
+            border-color: vars.$darkner-8;
+            background-color: vars.$darkner-8;
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        gap: 2px;
+        color: vars.$text-secondary;
+        font-size: 14px;
+        line-height: 20px;
+
+        &_top {
+            transform: translateY(-100%);
+        }
+    }
+}

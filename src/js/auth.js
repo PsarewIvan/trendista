@@ -4,14 +4,14 @@
     const popup = document.querySelector('.js-popup-auth');
     const popupForgotPass = document.querySelector('.js-popup-forgot-pass');
     const popupLogin = document.querySelector('.js-popup-login');
-    // const popupSuccess = document.querySelector('.js-popup-success');
+    const popupSupport = document.querySelector('.js-popup-support');
 
     const closePopupButtons = document.querySelectorAll('.js-close-popup');
     const forgotPassButtons = document.querySelectorAll(
         '.js-auth-button-forgot'
     );
     const loginButtons = document.querySelectorAll('.js-login-button');
-    // const successButtons = document.querySelectorAll('.js-success-button');
+    const supportButtons = document.querySelectorAll('.js-support-button');
 
     closePopupButtons.forEach((button) => {
         button?.addEventListener('click', closeAllPopup);
@@ -38,23 +38,23 @@
         });
     });
 
-    // successButtons.forEach((button) => {
-    //     button?.addEventListener('click', () => {
-    //         closeAllPopup();
-    //         // openPopup(popupSuccess)();
-    //     });
-    // });
+    supportButtons.forEach((button) => {
+        button?.addEventListener('click', () => {
+            closeAllPopup();
+            openPopup(popupSupport)();
+        });
+    });
 
     popup?.addEventListener('click', overlayClose(popup));
     popupForgotPass?.addEventListener('click', overlayClose(popupForgotPass));
     popupLogin?.addEventListener('click', overlayClose(popupLogin));
-    // popupSuccess?.addEventListener('click', overlayClose(popupSuccess));
+    popupSupport?.addEventListener('click', overlayClose(popupSupport));
 
     function closeAllPopup() {
         closePopup(popup)();
         closePopup(popupForgotPass)();
         closePopup(popupLogin)();
-        // closePopup(popupSuccess)();
+        closePopup(popupSupport)();
     }
 
     function overlayClose(element) {

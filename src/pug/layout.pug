@@ -16,8 +16,9 @@ html
 
         block content
 
-        block footer
-            include includes/footer.pug
+        if page != 'integration'
+            block footer
+                include includes/footer.pug
 
         block popup
             include components/popup-auth.pug

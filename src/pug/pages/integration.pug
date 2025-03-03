@@ -1,0 +1,30 @@
+extends ../layout.pug
+
+block variables
+    - var hasLogin = 'true'
+    - var page = 'integration'
+
+block content
+    include ../components/button.pug
+    include ../icons/icon-curet.pug
+    include ../icons/icon-plus.pug
+    include ../icons/icon-minus.pug
+
+    main.integration
+        .integration__block
+            h1.integration__title Ежемесячная статистика рынка салонов красоты и сравнение показателей с вашим салоном
+            .integration__text Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.
+        .integration__block
+            h2.integration__title2 Как подключиться?
+            .integration__list-title 1. Если у вас уже есть аккаунт в Trendista Global
+            ul.integration__list
+                li Скопируйте ваш уникальный ключ ниже и вставьте его в настройках личного кабинета
+            .integration__list-title 2. Если вы ещё не знакомы с нашим сервисом
+            ul.integration__list
+                li Зарегистрируйтесь на 
+                    a(href="trendista.ru") trendista.ru
+                li Выберите тариф «Тренды рынка + мой салон», если хотите видеть сравнение своего бизнеса с рынком
+                li Скопируйте свой уникальный ключ ниже и вставьте его в настройках личного кабинета сервиса
+        .integration__block
+            div
+                +button({text: 'Копировать уникальный ключ', size: 'l'})

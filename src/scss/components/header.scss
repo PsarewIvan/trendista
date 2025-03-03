@@ -15,6 +15,20 @@
         min-height: 80px;
     }
 
+    &_integration {
+        min-height: 80px;
+
+        .header__content {
+            max-width: 720px;
+            margin: 0;
+            padding: 0 32px;
+
+            @include vars.mobile {
+                padding: 0 16px;
+            }
+        }
+    }
+
     &__logo {
         display: flex;
         align-items: center;

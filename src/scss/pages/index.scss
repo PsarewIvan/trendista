@@ -117,6 +117,12 @@
         gap: 24px;
     }
 
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
     &__description {
         max-width: 720px;
 
@@ -146,7 +152,7 @@
     &__block {
         display: flex;
         flex-direction: column;
-        gap: 64px;
+        gap: 56px;
         padding: 32px;
         border-radius: 2px;
         background-color: vars.$darkner-4;
@@ -174,6 +180,7 @@
             .reports-grid__prices {
                 flex-direction: row;
                 gap: 48px;
+                // margin-top: 0;
 
                 @include vars.mobile {
                     justify-content: space-between;
@@ -181,9 +188,14 @@
                 }
             }
 
+            .reports-grid__price-icon {
+                width: 24px;
+                height: 24px;
+            }
+
             .reports-grid__price {
                 font-size: 24px;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 32px;
             }
         }
@@ -191,7 +203,6 @@
 
     &__title-block {
         display: flex;
-        padding-bottom: 40px;
 
         @include vars.tablet {
             padding-bottom: 32px;
@@ -245,9 +256,9 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        font-size: 48px;
-        font-weight: 400;
-        line-height: 58px;
+        font-size: 68px;
+        font-weight: 600;
+        line-height: 82px;
 
         @include vars.mobile {
             font-size: 24px;
@@ -265,8 +276,9 @@
     }
 
     &__price-icon {
-        width: 32px;
-        height: 32px;
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
 
         @include vars.mobile {
             width: 24px;

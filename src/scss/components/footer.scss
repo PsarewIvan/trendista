@@ -52,11 +52,26 @@
         object-fit: contain;
     }
 
+    &__copyright-br {
+        display: none;
+
+        @include vars.tablet {
+            display: block;
+        }
+    }
+
     &__copyright {
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
         color: vars.$background-primary;
+
+        a {
+            text-decoration: none;
+            color: vars.$link-300;
+            font-size: inherit;
+            font-weight: 700;
+        }
     }
 
     &__links {

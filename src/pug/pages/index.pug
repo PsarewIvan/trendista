@@ -12,7 +12,9 @@ block content
     main.main
         section.section.promo
             .promo__content
-                p.promo__text Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?
+                p.promo__text
+                    +icon-curet('promo__text-icon')
+                    span Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?
                 h1.heading1 Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном
                 div
                     +button({text: 'Узнать больше', size: 'l'})

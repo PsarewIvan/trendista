@@ -51,9 +51,8 @@
     }
 
     &__text {
-        position: relative;
         display: flex;
-        padding-left: 44px;
+        gap: 12px;
         margin: 0 0 32px;
         font-weight: 600;
         font-size: 20px;
@@ -63,16 +62,18 @@
             font-size: 16px;
             line-height: 24px;
         }
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 14px;
-            width: 32px;
-            height: 4px;
-            border-radius: 20px;
-            background-color: vars.$red-500;
+    &__text-icon {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        color: vars.$green-500;
+        transform: rotate(180deg);
+
+        @include vars.mobile {
+            width: 24px;
+            height: 24px;
         }
     }
 }

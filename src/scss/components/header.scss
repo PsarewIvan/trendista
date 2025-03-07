@@ -36,12 +36,12 @@
     }
 
     &__logo-img {
-        width: 197px;
-        height: 32px;
+        width: 303px;
+        height: 40px;
         object-fit: contain;
 
         @include vars.mobile {
-            width: 173px;
+            width: 212px;
             height: 28px;
         }
     }
@@ -86,6 +86,13 @@
 
         &:hover {
             border-bottom-color: vars.$red-500;
+        }
+    }
+
+    &__button-login {
+        @include vars.mobile {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
         }
     }
 }

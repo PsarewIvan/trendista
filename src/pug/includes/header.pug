@@ -6,7 +6,7 @@ block header
     header.header(class=headerClass)
         .header__content
             a.header__logo(href='/')
-                img.header__logo-img(src='img/logo.svg')
+                img.header__logo-img(src='img/logo.png')
             if page != 'integration'
                 ul.header__links
                     li
@@ -16,4 +16,4 @@ block header
                     li
                         a.header__link(href='#tariff') Тарифы
                 .header__login
-                    +button({text: 'Войти', theme: 'secondary', size: 'l', className: 'js-auth-button'})
+                    +button({text: 'Войти', theme: 'secondary', size: 'l', className: 'header__button-login js-auth-button'})

@@ -138,6 +138,7 @@ class ItcAccordion {
     const popupForgotPass = document.querySelector('.js-popup-forgot-pass');
     const popupLogin = document.querySelector('.js-popup-login');
     const popupSupport = document.querySelector('.js-popup-support');
+    const popupThanks = document.querySelector('.js-popup-thanks');
 
     const closePopupButtons = document.querySelectorAll('.js-close-popup');
     const forgotPassButtons = document.querySelectorAll(
@@ -145,6 +146,7 @@ class ItcAccordion {
     );
     const loginButtons = document.querySelectorAll('.js-login-button');
     const supportButtons = document.querySelectorAll('.js-support-button');
+    const thanksButtons = document.querySelectorAll('.js-thanks-button');
 
     closePopupButtons.forEach((button) => {
         button?.addEventListener('click', closeAllPopup);
@@ -178,16 +180,25 @@ class ItcAccordion {
         });
     });
 
+    thanksButtons.forEach((button) => {
+        button?.addEventListener('click', () => {
+            closeAllPopup();
+            openPopup(popupThanks)();
+        });
+    });
+
     popup?.addEventListener('click', overlayClose(popup));
     popupForgotPass?.addEventListener('click', overlayClose(popupForgotPass));
     popupLogin?.addEventListener('click', overlayClose(popupLogin));
     popupSupport?.addEventListener('click', overlayClose(popupSupport));
+    popupThanks?.addEventListener('click', overlayClose(popupThanks));
 
     function closeAllPopup() {
         closePopup(popup)();
         closePopup(popupForgotPass)();
         closePopup(popupLogin)();
         closePopup(popupSupport)();
+        closePopup(popupThanks)();
     }
 
     function overlayClose(element) {

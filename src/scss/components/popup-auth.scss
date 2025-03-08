@@ -167,4 +167,16 @@
         color: vars.$link-600;
         cursor: pointer;
     }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    a {
+        font-family: inherit;
+        font-size: inherit;
+        text-decoration: none;
+        color: vars.$link-600;
+    }
 }

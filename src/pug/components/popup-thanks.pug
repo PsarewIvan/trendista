@@ -1,0 +1,19 @@
+include ../icons/icon-cross.pug
+include ../components/button.pug
+include ../components/text-input.pug
+include ../components/text-area.pug
+include ../components/pass-input.pug
+include ../components/checkbox.pug
+
+mixin popup-thanks()
+    .popup-auth.hidden.js-popup-thanks
+        .popup-auth__box
+            .popup-auth__header
+                button.popup-auth__button.js-close-popup(type="button")
+                    +icon-cross('popup-auth__icon')
+            .popup-auth__content
+                .popup-auth__content-title-wrapper
+                    .popup-auth__content-title Ваш запрос успешно отправлен
+                .popup-auth__text В ближайшее время мы свяжемся с вами по [телефон или email указанный в форме]
+                .popup-auth__text Если вы ошиблись, указав неверный контакт, вы можете отправить запрос 
+                    a(href="/integration-reg.html") повторно.

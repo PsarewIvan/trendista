@@ -10,72 +10,68 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header header_integration">
       <div class="header__content"><a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.png"></a>
-        <ul class="header__links">
-          <li><a class="header__link" href="#data">Данные</a></li>
-          <li><a class="header__link" href="#question">Вопросы и ответы</a></li>
-          <li><a class="header__link" href="#tariff">Тарифы</a></li>
-        </ul>
-        <div class="header__login">
-              <button class="button l secondary header__button-login js-auth-button" type="button">Войти
-              </button>
-        </div>
       </div>
     </header>
-    <main class="main">
-      <section class="section details">
-        <h1 class="details__title">Реквизиты</h1>
-        <div class="details-table">
-          <div class="details-table__header">ИП Мох Эльвира Камилевна</div>
-          <div class="details-table__list">
-            <div class="details-table__element">
-              <div class="details-table__element-text">ИНН</div>
-              <div class="details-table__element-text">027412150755</div>
-            </div>
-            <div class="details-table__element">
-              <div class="details-table__element-text">ОГРНИП</div>
-              <div class="details-table__element-text">322028000060749</div>
-            </div>
-            <div class="details-table__element">
-              <div class="details-table__element-text">Адрес</div>
-              <div class="details-table__element-text">450 105, Респ. Башкортостан, г. Уфа, ул. Академика Королева, д. 8</div>
-            </div>
-            <div class="details-table__element">
-              <div class="details-table__element-text">Расчетный счет</div>
-              <div class="details-table__element-text">40802 810 7 0600 0057881</div>
-            </div>
-            <div class="details-table__element">
-              <div class="details-table__element-text">БИК</div>
-              <div class="details-table__element-text">048073601</div>
-            </div>
-            <div class="details-table__element">
-              <div class="details-table__element-text">Банк</div>
-              <div class="details-table__element-text">ПАО Сбербанк</div>
-            </div>
-            <div class="details-table__element">
-              <div class="details-table__element-text">Корсчёт</div>
-              <div class="details-table__element-text">30101 810 3 0000 0000601</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__content">
-        <div class="footer__block"><a class="footer__logo" href="/"><img class="footer__logo-img" src="img/logo-black.png"></a>
-          <div class="footer__copyright">© 2025, Все права защищены. <br class="footer__copyright-br"><span>Проект <a href="wazapa.ru">wazapa.ru</a></span></div>
-        </div>
-        <div class="footer__block">
-          <ul class="footer__links">
-            <li class="footer__links-element"><a class="footer__link" href="">Блог</a></li>
-            <li class="footer__links-element"><a class="footer__link" href="agreement">Пользовательское соглашение</a></li>
-            <li class="footer__links-element"><a class="footer__link" href="details">Реквизиты</a></li>
-            <li class="footer__links-element"><a class="footer__link js-support-button">Остались вопросы? Свяжитесь с нами</a></li>
-          </ul>
-        </div>
+    <main class="integration">
+      <div class="integration__block">
+        <h1 class="integration__title">Спасибо, что установили наше приложение</h1>
+        <div class="integration__text">Для получения статистики вам необходимо зарегистрироваться в Личном кабинете. После регистрации вы сможете оформить подписку, которая дает доступ к ежемесячным отчетам beauty-индустрии</div>
       </div>
-    </footer>
+      <div class="integration__block">
+        <h2 class="integration__title2">Регистрация</h2>
+        <form class="integration-form" action="">
+          <div class="integration-form__inputs">
+                <div class="text-input js-text-input-node m integration-form__email">
+                  <div class="text-input__input-wrapper">
+                    <input class="text-input__input js-text-input" type="text" placeholder="Укажите ваш email">
+                    <button class="text-input__reset js-text-input-reset" type="button">
+                          <svg class="text-input__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M13.0303 4.03033C13.3232 3.73744 13.3232 3.26256 13.0303 2.96967C12.7374 2.67678 12.2626 2.67678 11.9697 2.96967L8 6.93934L4.03033 2.96967C3.73744 2.67678 3.26256 2.67678 2.96967 2.96967C2.67678 3.26256 2.67678 3.73744 2.96967 4.03033L6.93934 8L2.96967 11.9697C2.67678 12.2626 2.67678 12.7374 2.96967 13.0303C3.26256 13.3232 3.73744 13.3232 4.03033 13.0303L8 9.06066L11.9697 13.0303C12.2626 13.3232 12.7374 13.3232 13.0303 13.0303C13.3232 12.7374 13.3232 12.2626 13.0303 11.9697L9.06066 8L13.0303 4.03033Z" fill="currentColor"></path>
+                          </svg>
+                    </button>
+                  </div>
+                  <div class="text-input__alert js-text-input-alert">Не указан email</div>
+                </div>
+                <div class="text-input js-pass-input-node m integration-form__pass">
+                  <div class="text-input__input-wrapper">
+                    <input class="text-input__input js-pass-input" type="password" placeholder="Придумайте пароль">
+                    <button class="text-input__show js-pass-input-show" type="button">
+                          <svg class="text-input__icon js-pass-input-icon-closed" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.375 16.4062C21.2894 16.4551 21.1949 16.4866 21.0971 16.4989C20.9992 16.5112 20.8999 16.504 20.8048 16.4779C20.7097 16.4518 20.6207 16.4072 20.5429 16.3466C20.4651 16.2861 20.3999 16.2107 20.3513 16.125L18.57 13.0125C17.5344 13.7127 16.3921 14.2402 15.1875 14.5744L15.7378 17.8762C15.7541 17.9734 15.751 18.0729 15.7288 18.1689C15.7065 18.2649 15.6656 18.3556 15.6083 18.4358C15.551 18.516 15.4785 18.5841 15.3949 18.6362C15.3113 18.6884 15.2182 18.7235 15.121 18.7397C15.081 18.7462 15.0405 18.7497 15 18.75C14.8226 18.7497 14.651 18.6866 14.5157 18.5717C14.3805 18.4569 14.2903 18.2978 14.2613 18.1228L13.7203 14.8809C12.5796 15.0397 11.4223 15.0397 10.2816 14.8809L9.74064 18.1228C9.71153 18.2982 9.62109 18.4575 9.48545 18.5723C9.3498 18.6872 9.17776 18.7502 9.00001 18.75C8.95856 18.7498 8.91718 18.7464 8.87626 18.7397C8.77904 18.7235 8.68596 18.6884 8.60233 18.6362C8.5187 18.5841 8.44617 18.516 8.38888 18.4358C8.33159 18.3556 8.29067 18.2649 8.26845 18.1689C8.24623 18.0729 8.24315 17.9734 8.25939 17.8762L8.81251 14.5744C7.60842 14.2391 6.4667 13.7107 5.43189 13.0097L3.65626 16.125C3.55681 16.2983 3.39258 16.425 3.19971 16.4772C3.00684 16.5294 2.80113 16.5029 2.62783 16.4034C2.45452 16.304 2.32783 16.1397 2.27561 15.9469C2.22339 15.754 2.24993 15.5483 2.34939 15.375L4.22439 12.0937C3.56579 11.5247 2.96019 10.8972 2.41501 10.2187C2.34702 10.1428 2.29522 10.0539 2.26276 9.95726C2.2303 9.86066 2.21787 9.75846 2.22622 9.65689C2.23457 9.55533 2.26353 9.45654 2.31133 9.36654C2.35914 9.27654 2.42478 9.19723 2.50426 9.13344C2.58373 9.06966 2.67537 9.02274 2.77359 8.99555C2.8718 8.96836 2.97452 8.96147 3.07548 8.9753C3.17645 8.98913 3.27353 9.02339 3.36082 9.07599C3.4481 9.12859 3.52374 9.19843 3.58314 9.28124C5.13939 11.2069 7.86189 13.5 12 13.5C16.1381 13.5 18.8606 11.204 20.4169 9.28124C20.4756 9.19673 20.5511 9.12522 20.6386 9.07113C20.7262 9.01705 20.8239 8.98157 20.9257 8.96688C21.0276 8.95219 21.1314 8.95862 21.2306 8.98576C21.3299 9.0129 21.4225 9.06018 21.5027 9.12465C21.5829 9.18912 21.649 9.2694 21.6968 9.3605C21.7447 9.45161 21.7732 9.55158 21.7808 9.6542C21.7883 9.75683 21.7747 9.8599 21.7407 9.95702C21.7067 10.0541 21.653 10.1432 21.5831 10.2187C21.038 10.8972 20.4324 11.5247 19.7738 12.0937L21.6488 15.375C21.6991 15.4605 21.732 15.5552 21.7454 15.6535C21.7589 15.7518 21.7527 15.8519 21.7273 15.9478C21.7018 16.0437 21.6576 16.1336 21.5971 16.2123C21.5366 16.291 21.4611 16.3569 21.375 16.4062Z" fill="currentColor"></path>
+                          </svg>
+                          <svg class="text-input__icon text-input__icon_open js-pass-input-icon-open hidden" width="30" height="20" viewBox="0 0 30 20" fill="none">
+                            <path d="M29.9 9.6C29.7 9.2 25.5 0 15 0C4.49999 0 0.299994 9.2 0.0999939 9.6C-6.10203e-06 9.9 -6.10203e-06 10.2 0.0999939 10.4C0.299994 10.8 4.49999 20 15 20C25.5 20 29.7 10.8 29.9 10.4C30 10.1 30 9.9 29.9 9.6ZM15 18C6.89999 18 2.99999 11.7 2.09999 10C2.99999 8.3 6.89999 2 15 2C23.1 2 27 8.3 27.9 10C27 11.7 23.1 18 15 18ZM15 4C11.7 4 8.99999 6.7 8.99999 10C8.99999 13.3 11.7 16 15 16C18.3 16 21 13.3 21 10C21 6.7 18.3 4 15 4ZM15 14C12.8 14 11 12.2 11 10C11 7.8 12.8 6 15 6C17.2 6 19 7.8 19 10C19 12.2 17.2 14 15 14Z" fill="currentColor"></path>
+                          </svg>
+                    </button>
+                  </div>
+                  <div class="text-input__alert js-pass-input-alert">Не указан пароль</div>
+                  <div class="text-input__addon">Пароль должен быть не менее 8 символов</div>
+                </div>
+          </div>
+          <div class="checkbox-wrapper integration-form__checkbox">
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox-access-oferta" name="auth-oferta">
+              <label class="checkbox__label" for="checkbox-access-oferta">
+                    <svg class="checkbox__icon-ok" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M14.5306 5.03063L6.5306 13.0306C6.46092 13.1005 6.37813 13.156 6.28696 13.1939C6.1958 13.2317 6.09806 13.2512 5.99935 13.2512C5.90064 13.2512 5.8029 13.2317 5.71173 13.1939C5.62057 13.156 5.53778 13.1005 5.4681 13.0306L1.9681 9.53063C1.89833 9.46087 1.84299 9.37804 1.80524 9.28689C1.76748 9.19574 1.74805 9.09804 1.74805 8.99938C1.74805 8.90072 1.76748 8.80302 1.80524 8.71187C1.84299 8.62072 1.89833 8.53789 1.9681 8.46813C2.03786 8.39837 2.12069 8.34302 2.21184 8.30527C2.30299 8.26751 2.40069 8.24808 2.49935 8.24808C2.59801 8.24808 2.69571 8.26751 2.78686 8.30527C2.87801 8.34302 2.96083 8.39837 3.0306 8.46813L5.99997 11.4375L13.4693 3.96938C13.6102 3.82848 13.8013 3.74933 14.0006 3.74933C14.1999 3.74933 14.391 3.82848 14.5318 3.96938C14.6727 4.11028 14.7519 4.30137 14.7519 4.50063C14.7519 4.69989 14.6727 4.89098 14.5318 5.03188L14.5306 5.03063Z" fill="currentColor"></path>
+                    </svg>
+                <div>Я подтверждаю, что ознакомлен с условиями</div><a href="/">Пользовательского соглашения</a><span> и соглашаюсь с </span><a href="/">Правилами использования и обработки персональных данных</a>
+                <div class="checkbox__alert">Необходимо ваше подтверждение</div>
+              </label>
+            </div>
+          </div><img class="integration-form__captcha" src="img/captcha.png">
+          <div>
+                <button class="button l primary integration-form__apply-button" type="button">Войти
+                </button>
+          </div>
+        </form>
+      </div>
+      <div class="integration__login"><span>Уже есть аккаунт?</span>
+        <button class="integration__login-button js-auth-button" type="button">Войдите</button>
+      </div>
+    </main>
         <div class="popup-auth hidden js-popup-auth">
           <div class="popup-auth__box">
             <div class="popup-auth__header">
@@ -302,7 +298,7 @@
                 <div class="popup-auth__content-title">Ваш запрос успешно отправлен</div>
               </div>
               <div class="popup-auth__text">В ближайшее время мы свяжемся с вами по [телефон или email указанный в форме]</div>
-              <div class="popup-auth__text">Если вы ошиблись, указав неверный контакт, вы можете отправить запрос <a href="/integration-reg.html">повторно.</a></div>
+              <div class="popup-auth__text">Если вы ошиблись, указав неверный контакт, вы можете отправить запрос повторно.</div>
             </div>
           </div>
         </div>

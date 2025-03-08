@@ -1,0 +1,41 @@
+extends ../layout.pug
+
+block variables
+    - var hasLogin = 'true'
+    - var page = 'integration'
+
+block content
+    include ../components/button.pug
+    include ../components/text-input.pug
+    include ../components/pass-input.pug
+    include ../icons/icon-curet.pug
+    include ../icons/icon-plus.pug
+    include ../icons/icon-minus.pug
+    include ../icons/icon-ok.pug
+
+    main.integration
+        .integration__block
+            h1.integration__title Спасибо, что установили наше приложение
+            .integration__text Для получения статистики вам необходимо зарегистрироваться в Личном кабинете. После регистрации вы сможете оформить подписку, которая дает доступ к ежемесячным отчетам beauty-индустрии
+        .integration__block
+            h2.integration__title2 Регистрация
+            form.integration-form(action="")
+                .integration-form__inputs
+                    +text-input({ alert: 'Не указан email', placeholder: 'Укажите ваш email', className: 'integration-form__email'})
+                    +pass-input({placeholder: 'Придумайте пароль', alert: 'Не указан пароль', addon: 'Пароль должен быть не менее 8 символов', className: 'integration-form__pass'})
+                .checkbox-wrapper.integration-form__checkbox
+                    .checkbox
+                        input(type="checkbox" id='checkbox-access-oferta' name='auth-oferta' checked=false)
+                        label.checkbox__label(for='checkbox-access-oferta')
+                            +icon-ok('checkbox__icon-ok')
+                            div Я подтверждаю, что ознакомлен с условиями
+                            a(href='/') Пользовательского соглашения
+                            span  и соглашаюсь с 
+                            a(href='/') Правилами использования и обработки персональных данных
+                            .checkbox__alert Необходимо ваше подтверждение
+                img.integration-form__captcha(src='img/captcha.png')
+                div
+                    +button({text: 'Войти', size: 'l', className: 'integration-form__apply-button'})
+        .integration__login
+            span Уже есть аккаунт?
+            button.integration__login-button.js-auth-button(type='button') Войдите

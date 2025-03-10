@@ -1,0 +1,100 @@
+extends ../layout.pug
+
+block variables
+    - var hasLogin = 'true'
+
+block content
+    include ../icons/icon-cross.pug
+    include ../icons/icon-chevron-left.pug
+
+    main.main
+        section.section.blog
+            h1.heading1 Блог
+            .blog-buttons.js-blog-buttons
+                button.blog-buttons__button.active(type="button") Новости
+                    +icon-cross('blog-buttons__icon')
+                button.blog-buttons__button(type="button") Лайфхаки
+                    +icon-cross('blog-buttons__icon')
+                button.blog-buttons__button(type="button") Стратегия
+                    +icon-cross('blog-buttons__icon')
+                button.blog-buttons__button(type="button") Маркетинг
+                    +icon-cross('blog-buttons__icon')
+                button.blog-buttons__button(type="button") Персонал
+                    +icon-cross('blog-buttons__icon')
+                button.blog-buttons__button(type="button") Законы
+                    +icon-cross('blog-buttons__icon')
+                button.blog-buttons__button(type="button") Финансы
+                    +icon-cross('blog-buttons__icon')
+            .blog__cards
+                .blog-card
+                    .blog-card__img-block
+                        img.blog-card__img(src="/img/photo1.jpg")
+                    .blog-card__block
+                        .blog-card__statuses
+                            .blog-card__tag.blog-card__tag_news Новости
+                            .blog-card__date 12 января 2025
+                        .blog-card__content
+                            a(href="blog-item").blog-card__title Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка
+                            .blog-card__text Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.
+                .blog-card
+                    .blog-card__img-block
+                        img.blog-card__img(src="/img/photo2.jpg")
+                    .blog-card__block
+                        .blog-card__statuses
+                            .blog-card__tag.blog-card__tag_lifehack Лайфхаки
+                            .blog-card__date 12 января 2025
+                        .blog-card__content
+                            a(href="blog-item").blog-card__title 5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки
+                            .blog-card__text Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли
+                .blog-card
+                    .blog-card__img-block
+                        img.blog-card__img(src="/img/photo3.jpg")
+                    .blog-card__block
+                        .blog-card__statuses
+                            .blog-card__tag.blog-card__tag_strategy Стратегия
+                            .blog-card__date 12 января 2025
+                        .blog-card__content
+                            a(href="blog-item").blog-card__title Анализ ваших показателей: как понять, что пора менять стратегию
+                            .blog-card__text Бизнес-коуч делится методиками анализа динамики выручки и визитов, помогая разработать успешный план действий для роста вашего бизнеса
+                .blog-card
+                    .blog-card__img-block
+                        img.blog-card__img(src="/img/photo1.jpg")
+                    .blog-card__block
+                        .blog-card__statuses
+                            .blog-card__tag.blog-card__tag_news Новости
+                            .blog-card__date 12 января 2025
+                        .blog-card__content
+                            a(href="blog-item").blog-card__title Тренды в бьюти-бизнесе: как статистика помогает адаптироваться к изменениям рынка
+                            .blog-card__text Как использовать данные аналитики, чтобы оставаться впереди конкурентов и развивать свой салон в условиях перемен.
+                .blog-card
+                    .blog-card__img-block
+                        img.blog-card__img(src="/img/photo2.jpg")
+                    .blog-card__block
+                        .blog-card__statuses
+                            .blog-card__tag.blog-card__tag_lifehack Лайфхаки
+                            .blog-card__date 12 января 2025
+                        .blog-card__content
+                            a(href="blog-item").blog-card__title 5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки
+                            .blog-card__text Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли
+                .blog-card
+                    .blog-card__img-block
+                        img.blog-card__img(src="/img/photo3.jpg")
+                    .blog-card__block
+                        .blog-card__statuses
+                            .blog-card__tag.blog-card__tag_strategy Стратегия
+                            .blog-card__date 12 января 2025
+                        .blog-card__content
+                            a(href="blog-item").blog-card__title Анализ ваших показателей: как понять, что пора менять стратегию
+                            .blog-card__text Бизнес-коуч делится методиками анализа динамики выручки и визитов, помогая разработать успешный план действий для роста вашего бизнеса
+            .pagination
+                button.pagination__button.pagination__button_left.pagination__button_disabled(type='button', disabled="true")
+                    +icon-chevron-left('pagination__icon')
+                button.pagination__button.pagination__button_active(type='button') 1
+                button.pagination__button(type='button') 2
+                button.pagination__button.mobile-none(type='button') 3
+                button.pagination__button.pagination__button_desktop.mobile-none(type='button') 4
+                button.pagination__button.pagination__button_desktop.mobile-none(type='button') 5
+                button.pagination__button.pagination__button_disabled(type='button', disabled="true") ...
+                button.pagination__button(type='button') 6
+                button.pagination__button.pagination__button_right(type='button')
+                    +icon-chevron-left('pagination__icon pagination__icon_right')

@@ -1,0 +1,170 @@
+@use '../vars.scss';
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    @include vars.mobile {
+        padding: 16px 0;
+    }
+
+    .heading1 {
+        margin: 0;
+
+        @include vars.mobile {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 32px;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 64px;
+        column-gap: 32px;
+
+        @include vars.tablet {
+            row-gap: 32px;
+            column-gap: 24px;
+        }
+
+        @include vars.mobile {
+            display: flex;
+            flex-direction: column;
+            column-gap: 16px;
+        }
+    }
+}
+
+.blog-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &__button {
+        position: relative;
+        display: flex;
+        padding: 6px 20px;
+        margin: 0;
+        border: 2px solid transparent;
+        border-radius: 2px;
+        background-color: vars.$darkner-4;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus,
+        &:hover {
+            border-color: vars.$darkner-8;
+        }
+
+        &.active {
+            padding: 6px 34px 6px 10px;
+            border-color: vars.$darkner-8;
+            background-color: vars.$text-secondary;
+            color: vars.$text-primary-invert;
+
+            .blog-buttons__icon {
+                display: block;
+            }
+        }
+    }
+
+    &__icon {
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 16px;
+        height: 16px;
+        color: vars.$text-primary-invert;
+        opacity: 0.56;
+    }
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+
+    &__img-block {
+        display: flex;
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 32px 16px;
+    }
+
+    &__statuses {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 8px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__tag {
+        display: flex;
+        padding: 4px 12px;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 24px;
+
+        &_news {
+            background-color: vars.$link-100;
+        }
+
+        &_lifehack {
+            background-color: vars.$green-100;
+        }
+
+        &_strategy {
+            background-color: vars.$red-100;
+        }
+    }
+
+    &__date {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

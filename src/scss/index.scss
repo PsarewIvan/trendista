@@ -13,9 +13,13 @@
 @use './components/agreement.scss';
 @use './components/details.scss';
 @use './components/text-area.scss';
+@use './components/pagination.scss';
+@use './components/quote.scss';
 
 @use './pages/index.scss';
 @use './pages/integration.scss';
+@use './pages/blog.scss';
+@use './pages/blog-item.scss';
 
 * {
     box-sizing: border-box;
@@ -97,4 +101,10 @@ body {
 
 .body-lock {
     overflow: hidden;
+}
+
+.mobile-none {
+    @include vars.mobile {
+        display: none;
+    }
 }

@@ -259,6 +259,20 @@ class ItcAccordion {
 })();
 
 (() => {
+    const buttonsBlock = document.querySelector('.js-blog-buttons');
+
+    if (buttonsBlock) {
+        const buttons = buttonsBlock.querySelectorAll('button');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+            });
+        });
+    }
+})();
+
+(() => {
     const ACTIVE_CLASS = 'active';
     const nodes = document.querySelectorAll('.js-pass-input-node');
 

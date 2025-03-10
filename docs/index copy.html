@@ -7,19 +7,18 @@
     <meta content="" name="Keywords">
     <meta content="index,follow" name="robots">
     <title>Trendista Global</title>
-    <link rel="stylesheet" href="libs/splide-core-min.css">
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <header class="header">
-      <div class="header__content"><a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.svg"></a>
+      <div class="header__content"><a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.png"></a>
         <ul class="header__links">
           <li><a class="header__link" href="#data">Данные</a></li>
           <li><a class="header__link" href="#question">Вопросы и ответы</a></li>
           <li><a class="header__link" href="#tariff">Тарифы</a></li>
         </ul>
         <div class="header__login">
-              <button class="button l secondary js-auth-button" type="button">Войти
+              <button class="button l secondary header__button-login js-auth-button" type="button">Войти
               </button>
         </div>
       </div>
@@ -27,7 +26,11 @@
     <main class="main">
       <section class="section promo">
         <div class="promo__content">
-          <p class="promo__text">Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?</p>
+          <p class="promo__text">
+                <svg class="promo__text-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M8.13602 10.6666C6.70402 10.6666 5.93868 12.3533 6.88268 13.4306L14.244 21.844C14.463 22.0942 14.733 22.2948 15.0359 22.4322C15.3387 22.5697 15.6674 22.6408 16 22.6408C16.3326 22.6408 16.6613 22.5697 16.9642 22.4322C17.267 22.2948 17.537 22.0942 17.756 21.844L25.1187 13.4306C26.0613 12.3533 25.296 10.6666 23.8653 10.6666H8.13468H8.13602Z" fill="currentColor"></path>
+                </svg><span>Хотите знать, насколько ваш бизнес успешен в сравнении с конкурентами?</span>
+          </p>
           <h1 class="heading1">Ежемесячная статистика рынка салонов красоты по 17 показателям и сравнение с твоим салоном</h1>
           <div>
                 <button class="button l primary " type="button">Узнать больше
@@ -39,7 +42,10 @@
         <p class="description__text">Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка</p>
       </section>
       <section class="section reports" id="data">
-        <h2 class="heading2">Ежемесячные отчёты</h2>
+        <div class="reports__title">
+          <h2 class="heading2">Ежемесячные отчёты</h2>
+          <p class="sub-heading">Пример по трем показателям за февраль 2025 года</p>
+        </div>
         <div class="reports-grid">
           <div class="reports-grid__block">
             <div class="reports-grid__title-block">
@@ -51,7 +57,7 @@
                 <div class="reports-grid__price reports-grid__price_red">
                       <svg class="reports-grid__price-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <path d="M8.13602 10.6666C6.70402 10.6666 5.93868 12.3533 6.88268 13.4306L14.244 21.844C14.463 22.0942 14.733 22.2948 15.0359 22.4322C15.3387 22.5697 15.6674 22.6408 16 22.6408C16.3326 22.6408 16.6613 22.5697 16.9642 22.4322C17.267 22.2948 17.537 22.0942 17.756 21.844L25.1187 13.4306C26.0613 12.3533 25.296 10.6666 23.8653 10.6666H8.13468H8.13602Z" fill="currentColor"></path>
-                      </svg><span>6,72 %</span>
+                      </svg><span>6,72%</span>
                 </div>
               </div>
               <div class="reports-grid__prices-block">
@@ -59,7 +65,7 @@
                 <div class="reports-grid__price reports-grid__price_green">
                       <svg class="reports-grid__price-icon reports-grid__price-icon_revert" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <path d="M8.13602 10.6666C6.70402 10.6666 5.93868 12.3533 6.88268 13.4306L14.244 21.844C14.463 22.0942 14.733 22.2948 15.0359 22.4322C15.3387 22.5697 15.6674 22.6408 16 22.6408C16.3326 22.6408 16.6613 22.5697 16.9642 22.4322C17.267 22.2948 17.537 22.0942 17.756 21.844L25.1187 13.4306C26.0613 12.3533 25.296 10.6666 23.8653 10.6666H8.13468H8.13602Z" fill="currentColor"></path>
-                      </svg><span>10,48 %</span>
+                      </svg><span>10,48%</span>
                 </div>
               </div>
             </div>
@@ -74,7 +80,7 @@
                 <div class="reports-grid__price reports-grid__price_green">
                       <svg class="reports-grid__price-icon reports-grid__price-icon_revert" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <path d="M8.13602 10.6666C6.70402 10.6666 5.93868 12.3533 6.88268 13.4306L14.244 21.844C14.463 22.0942 14.733 22.2948 15.0359 22.4322C15.3387 22.5697 15.6674 22.6408 16 22.6408C16.3326 22.6408 16.6613 22.5697 16.9642 22.4322C17.267 22.2948 17.537 22.0942 17.756 21.844L25.1187 13.4306C26.0613 12.3533 25.296 10.6666 23.8653 10.6666H8.13468H8.13602Z" fill="currentColor"></path>
-                      </svg><span>3,12 %</span>
+                      </svg><span>3,12%</span>
                 </div>
               </div>
               <div class="reports-grid__prices-block">
@@ -82,7 +88,7 @@
                 <div class="reports-grid__price reports-grid__price_green">
                       <svg class="reports-grid__price-icon reports-grid__price-icon_revert" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <path d="M8.13602 10.6666C6.70402 10.6666 5.93868 12.3533 6.88268 13.4306L14.244 21.844C14.463 22.0942 14.733 22.2948 15.0359 22.4322C15.3387 22.5697 15.6674 22.6408 16 22.6408C16.3326 22.6408 16.6613 22.5697 16.9642 22.4322C17.267 22.2948 17.537 22.0942 17.756 21.844L25.1187 13.4306C26.0613 12.3533 25.296 10.6666 23.8653 10.6666H8.13468H8.13602Z" fill="currentColor"></path>
-                      </svg><span>1,21 %</span>
+                      </svg><span>1,21%</span>
                 </div>
               </div>
             </div>
@@ -97,7 +103,7 @@
                 <div class="reports-grid__price reports-grid__price_red">
                       <svg class="reports-grid__price-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <path d="M8.13602 10.6666C6.70402 10.6666 5.93868 12.3533 6.88268 13.4306L14.244 21.844C14.463 22.0942 14.733 22.2948 15.0359 22.4322C15.3387 22.5697 15.6674 22.6408 16 22.6408C16.3326 22.6408 16.6613 22.5697 16.9642 22.4322C17.267 22.2948 17.537 22.0942 17.756 21.844L25.1187 13.4306C26.0613 12.3533 25.296 10.6666 23.8653 10.6666H8.13468H8.13602Z" fill="currentColor"></path>
-                      </svg><span>2,83 %</span>
+                      </svg><span>2,83%</span>
                 </div>
               </div>
               <div class="reports-grid__prices-block">
@@ -105,7 +111,7 @@
                 <div class="reports-grid__price reports-grid__price_green">
                       <svg class="reports-grid__price-icon reports-grid__price-icon_revert" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <path d="M8.13602 10.6666C6.70402 10.6666 5.93868 12.3533 6.88268 13.4306L14.244 21.844C14.463 22.0942 14.733 22.2948 15.0359 22.4322C15.3387 22.5697 15.6674 22.6408 16 22.6408C16.3326 22.6408 16.6613 22.5697 16.9642 22.4322C17.267 22.2948 17.537 22.0942 17.756 21.844L25.1187 13.4306C26.0613 12.3533 25.296 10.6666 23.8653 10.6666H8.13468H8.13602Z" fill="currentColor"></path>
-                      </svg><span>37,02 %</span>
+                      </svg><span>37,02%</span>
                 </div>
               </div>
             </div>
@@ -319,15 +325,15 @@
     </main>
     <footer class="footer">
       <div class="footer__content">
-        <div class="footer__block"><a class="footer__logo" href="/"><img class="footer__logo-img" src="img/logo-black.svg"></a>
-          <div class="footer__copyright">© 2025, Все права защищены</div>
+        <div class="footer__block"><a class="footer__logo" href="/"><img class="footer__logo-img" src="img/logo-black.png"></a>
+          <div class="footer__copyright">© 2025, Все права защищены. <br class="footer__copyright-br"><span>Проект <a href="wazapa.ru">wazapa.ru</a></span></div>
         </div>
         <div class="footer__block">
           <ul class="footer__links">
-            <li class="footer__links-element"><a class="footer__link" href="">Блог</a></li>
+            <li class="footer__links-element"><a class="footer__link" href="blog">Блог</a></li>
             <li class="footer__links-element"><a class="footer__link" href="agreement">Пользовательское соглашение</a></li>
             <li class="footer__links-element"><a class="footer__link" href="details">Реквизиты</a></li>
-            <li class="footer__links-element"><a class="footer__link" href="">Остались вопросы? Свяжитесь с нами</a></li>
+            <li class="footer__links-element"><a class="footer__link js-support-button">Остались вопросы? Свяжитесь с нами</a></li>
           </ul>
         </div>
       </div>
@@ -489,6 +495,76 @@
               <div class="popup-auth__login"><span>Уже есть аккаунт?</span>
                 <button class="popup-auth__login-button js-auth-button" type="button">Войдите</button>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-auth hidden js-popup-support">
+          <div class="popup-auth__box">
+            <div class="popup-auth__header">
+              <button class="popup-auth__button js-close-popup" type="button">
+                    <svg class="popup-auth__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M13.0303 4.03033C13.3232 3.73744 13.3232 3.26256 13.0303 2.96967C12.7374 2.67678 12.2626 2.67678 11.9697 2.96967L8 6.93934L4.03033 2.96967C3.73744 2.67678 3.26256 2.67678 2.96967 2.96967C2.67678 3.26256 2.67678 3.73744 2.96967 4.03033L6.93934 8L2.96967 11.9697C2.67678 12.2626 2.67678 12.7374 2.96967 13.0303C3.26256 13.3232 3.73744 13.3232 4.03033 13.0303L8 9.06066L11.9697 13.0303C12.2626 13.3232 12.7374 13.3232 13.0303 13.0303C13.3232 12.7374 13.3232 12.2626 13.0303 11.9697L9.06066 8L13.0303 4.03033Z" fill="currentColor"></path>
+                    </svg>
+              </button>
+            </div>
+            <div class="popup-auth__content">
+              <div class="popup-auth__content-title-wrapper">
+                <div class="popup-auth__content-title">Остались вопросы? Свяжитесь с нами</div>
+              </div>
+              <form class="popup-auth__form" action="">
+                    <div class="text-input js-text-input-node m popup-auth__form-email">
+                      <div class="text-input__input-wrapper">
+                        <input class="text-input__input js-text-input" type="text" placeholder="Укажите ваш телефон или email">
+                        <button class="text-input__reset js-text-input-reset" type="button">
+                              <svg class="text-input__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.0303 4.03033C13.3232 3.73744 13.3232 3.26256 13.0303 2.96967C12.7374 2.67678 12.2626 2.67678 11.9697 2.96967L8 6.93934L4.03033 2.96967C3.73744 2.67678 3.26256 2.67678 2.96967 2.96967C2.67678 3.26256 2.67678 3.73744 2.96967 4.03033L6.93934 8L2.96967 11.9697C2.67678 12.2626 2.67678 12.7374 2.96967 13.0303C3.26256 13.3232 3.73744 13.3232 4.03033 13.0303L8 9.06066L11.9697 13.0303C12.2626 13.3232 12.7374 13.3232 13.0303 13.0303C13.3232 12.7374 13.3232 12.2626 13.0303 11.9697L9.06066 8L13.0303 4.03033Z" fill="currentColor"></path>
+                              </svg>
+                        </button>
+                      </div>
+                      <div class="text-input__alert js-text-input-alert">Не указан email</div>
+                    </div>
+                    <div class="text-area js-text-area-node popup-auth__form-textarea">
+                      <div class="text-area__label">Текст сообщения</div>
+                      <textarea class="text-area__input js-text-area" placeholder=""></textarea>
+                      <div class="text-area__counter">
+                        <div class="js-text-area-counter">0</div>
+                        <div>/</div>
+                        <div>1500</div>
+                      </div>
+                    </div>
+                <div class="checkbox-wrapper popup-auth__checkbox">
+                  <div class="checkbox">
+                    <input type="checkbox" id="checkbox-oferta-support" name="auth-oferta">
+                    <label class="checkbox__label" for="checkbox-oferta-support">
+                          <svg class="checkbox__icon-ok" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M14.5306 5.03063L6.5306 13.0306C6.46092 13.1005 6.37813 13.156 6.28696 13.1939C6.1958 13.2317 6.09806 13.2512 5.99935 13.2512C5.90064 13.2512 5.8029 13.2317 5.71173 13.1939C5.62057 13.156 5.53778 13.1005 5.4681 13.0306L1.9681 9.53063C1.89833 9.46087 1.84299 9.37804 1.80524 9.28689C1.76748 9.19574 1.74805 9.09804 1.74805 8.99938C1.74805 8.90072 1.76748 8.80302 1.80524 8.71187C1.84299 8.62072 1.89833 8.53789 1.9681 8.46813C2.03786 8.39837 2.12069 8.34302 2.21184 8.30527C2.30299 8.26751 2.40069 8.24808 2.49935 8.24808C2.59801 8.24808 2.69571 8.26751 2.78686 8.30527C2.87801 8.34302 2.96083 8.39837 3.0306 8.46813L5.99997 11.4375L13.4693 3.96938C13.6102 3.82848 13.8013 3.74933 14.0006 3.74933C14.1999 3.74933 14.391 3.82848 14.5318 3.96938C14.6727 4.11028 14.7519 4.30137 14.7519 4.50063C14.7519 4.69989 14.6727 4.89098 14.5318 5.03188L14.5306 5.03063Z" fill="currentColor"></path>
+                          </svg>
+                      <div>Я подтверждаю, что ознакомлен с условиями</div><a href="/">Пользовательского соглашения</a><span> и соглашаюсь с </span><a href="/">Правилами использования и обработки персональных данных</a>
+                      <div class="checkbox__alert">Необходимо ваше подтверждение</div>
+                    </label>
+                  </div>
+                </div><img class="popup-auth__captcha" src="img/captcha.png">
+                    <button class="button l primary popup-auth__apply-button" type="button">Отправить
+                    </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="popup-auth hidden js-popup-thanks">
+          <div class="popup-auth__box">
+            <div class="popup-auth__header">
+              <button class="popup-auth__button js-close-popup" type="button">
+                    <svg class="popup-auth__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M13.0303 4.03033C13.3232 3.73744 13.3232 3.26256 13.0303 2.96967C12.7374 2.67678 12.2626 2.67678 11.9697 2.96967L8 6.93934L4.03033 2.96967C3.73744 2.67678 3.26256 2.67678 2.96967 2.96967C2.67678 3.26256 2.67678 3.73744 2.96967 4.03033L6.93934 8L2.96967 11.9697C2.67678 12.2626 2.67678 12.7374 2.96967 13.0303C3.26256 13.3232 3.73744 13.3232 4.03033 13.0303L8 9.06066L11.9697 13.0303C12.2626 13.3232 12.7374 13.3232 13.0303 13.0303C13.3232 12.7374 13.3232 12.2626 13.0303 11.9697L9.06066 8L13.0303 4.03033Z" fill="currentColor"></path>
+                    </svg>
+              </button>
+            </div>
+            <div class="popup-auth__content">
+              <div class="popup-auth__content-title-wrapper">
+                <div class="popup-auth__content-title">Ваш запрос успешно отправлен</div>
+              </div>
+              <div class="popup-auth__text">В ближайшее время мы свяжемся с вами по [телефон или email указанный в форме]</div>
+              <div class="popup-auth__text">Если вы ошиблись, указав неверный контакт, вы можете отправить запрос <a href="/integration-reg.html">повторно.</a></div>
             </div>
           </div>
         </div>

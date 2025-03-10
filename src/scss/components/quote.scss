@@ -1,0 +1,79 @@
+@use '../vars.scss';
+
+.quote {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__icon {
+        flex-shrink: 0;
+        padding-right: 16px;
+        border-right: 2px solid vars.$red-500;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 58px;
+        color: vars.$red-500;
+
+        @include vars.mobile {
+            padding-right: 12px;
+            font-size: 32px;
+            line-height: 44px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 0 16px 16px;
+
+        @include vars.mobile {
+            padding: 8px 0 8px 12px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+
+        @include vars.mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__user {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+    }
+
+    &__avatar {
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        border: 2px solid vars.$darkner-8;
+
+        @include vars.mobile {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &__user-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 0;
+    }
+
+    &__user-name {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__user-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

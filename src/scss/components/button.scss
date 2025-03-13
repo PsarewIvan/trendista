@@ -55,4 +55,33 @@
             opacity: 0.48;
         }
     }
+
+    &.invert {
+        background-color: vars.$background-primary;
+        border-color: transparent;
+        color: vars.$red-500;
+
+        &:hover:not(:disabled) {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        &:disabled {
+            opacity: 0.48;
+        }
+    }
+
+    &.secondary-invert {
+        background-color: transparent;
+        border-color: vars.$background-primary;
+        color: vars.$text-primary-invert;
+
+        &:hover:not(:disabled) {
+            background-color: vars.$darkner-4;
+            border-color: vars.$background-primary;
+        }
+
+        &:disabled {
+            opacity: 0.48;
+        }
+    }
 }

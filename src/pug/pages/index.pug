@@ -20,7 +20,10 @@ block content
                     +button({text: 'Узнать больше', size: 'l'})
 
         section.section.description
-            p.description__text Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка
+            .description__block
+                p.description__text Trendista Global использует современные технологии обработки данных и методы анализа Big Data, чтобы предоставить салонам красоты полную картину рынка
+                div
+                    +button({text: 'Хочу попробовать', theme: 'secondary-invert', size: 'l'})
 
         section.section.reports(id="data")
             .reports__title
@@ -69,7 +72,9 @@ block content
                             .reports-grid__price.reports-grid__price_green
                                 +icon-curet('reports-grid__price-icon reports-grid__price-icon_revert')
                                 span 37,02%
-            .reports__description Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.
+            .reports__description-block
+                .reports__description Мы используем данные более 4000 салонов по стране, чтобы предоставить объективную и актуальную аналитику по 30 ключевым показателям. Данные обновляются ежемесячно, что позволяет отслеживать динамику как год к году, так и месяц к месяцу.
+                +button({text: 'Хочу попробовать', size: 'l'})
 
         section.section.questions(id="question")
             h2.heading2 Вопросы и ответы

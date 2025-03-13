@@ -32,10 +32,10 @@
     &__block {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 24px;
         padding: 32px 0;
 
-        @include vars.tablet {
+        @include vars.mobile {
             gap: 16px;
             padding: 16px 0;
         }
@@ -50,6 +50,14 @@
         width: 303px;
         height: 40px;
         object-fit: contain;
+    }
+
+    &__tel {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        color: vars.$text-primary-invert;
+        text-decoration: none;
     }
 
     &__copyright-br {
@@ -110,6 +118,8 @@
     }
 
     &__link {
+        font-size: 20px;
+        line-height: 32px;
         color: vars.$text-primary-invert;
         text-decoration: none;
         cursor: pointer;

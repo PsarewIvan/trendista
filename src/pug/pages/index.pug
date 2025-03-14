@@ -8,6 +8,7 @@ block content
     include ../icons/icon-curet.pug
     include ../icons/icon-plus.pug
     include ../icons/icon-minus.pug
+    include ../icons/icon-phone.pug
 
     main.main
         section.section.promo
@@ -224,3 +225,6 @@ block content
                                     .blog-item__time 12 января 2025
                                 a.blog-item__title(href='/') 5 ключевых ошибок владельцев салонов: советы эксперта для повышения выручки
                                 .blog-item__text Разбираем распространённые ошибки и предлагаем практические рекомендации, как избежать их, основываясь на реальных данных из отрасли
+
+    button.call-button(type="button")
+        +icon-phone('call-button__icon')

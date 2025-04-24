@@ -36,8 +36,8 @@
     }
 
     &__logo-img {
-        width: 303px;
-        height: 40px;
+        width: 364px;
+        height: 48px;
         object-fit: contain;
 
         @include vars.mobile {
@@ -90,6 +90,8 @@
     }
 
     &__button-login {
+        min-width: auto !important;
+
         @include vars.mobile {
             padding-left: 16px !important;
             padding-right: 16px !important;
